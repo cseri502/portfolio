@@ -96,7 +96,7 @@ onUnmounted(() => {
           <!-- Language Selector -->
           <div class="relative">
             <button @click="toggleLanguageMenu"
-              class="p-2 text-gray-700 dark:text-gray-300 hover:text-sky-500 dark:hover:text-sky-500 transition-colors duration-200 bg-gray-200/50 dark:bg-gray-800/50 rounded-md flex items-center"
+              class="p-2 text-gray-700 dark:text-gray-300 hover:text-sky-500 dark:hover:text-sky-500 transition-colors duration-200 bg-gray-200/50 dark:bg-gray-800/50 rounded-md flex items-center cursor-pointer"
               aria-label="Change language">
               <Icon :icon="flagIcon" class="w-5 h-5" />
               <Icon icon="ph:caret-down" class="w-4 h-4 ml-1" />
@@ -116,7 +116,7 @@ onUnmounted(() => {
           </div>
 
           <button @click="emit('toggle-dark-mode')"
-            class="p-2 text-gray-700 dark:text-gray-300 hover:text-sky-500 dark:hover:text-sky-500 transition-colors duration-200 bg-gray-200/50 dark:bg-gray-800/50 rounded-md"
+            class="p-2 text-gray-700 dark:text-gray-300 hover:text-sky-500 dark:hover:text-sky-500 transition-colors duration-200 bg-gray-200/50 dark:bg-gray-800/50 rounded-md cursor-pointer"
             aria-label="Toggle dark mode">
             <Icon :icon="!isDarkMode ? 'ph:sun' : 'ph:moon'" class="w-5 h-5" />
           </button>

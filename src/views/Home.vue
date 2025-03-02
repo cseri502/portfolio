@@ -21,9 +21,8 @@ const t = computed(() => {
   return translations[currentLanguage.value as keyof typeof translations]
 })
 
-// Organize skills by category for better display
 const skillsByCategory = {
-  frontend: [
+  Frontend: [
     { name: 'HTML', icon: 'vscode-icons:file-type-html' },
     { name: 'CSS', icon: 'devicon:css3' },
     { name: 'SASS', icon: 'vscode-icons:file-type-sass' },
@@ -36,18 +35,18 @@ const skillsByCategory = {
     { name: 'TailwindCSS', icon: 'vscode-icons:file-type-tailwind' },
     { name: 'Bootstrap', icon: 'logos:bootstrap' },
   ],
-  backend: [
+  Backend: [
     { name: 'C#', icon: 'devicon:csharp' },
     { name: 'C++', icon: 'vscode-icons:file-type-cpp3' },
     { name: 'Python', icon: 'vscode-icons:file-type-python' },
     { name: 'ASP.NET', icon: 'logos:dotnet' },
     { name: 'Node.JS', icon: 'logos:nodejs-icon' },
   ],
-  database: [
+  Database: [
     { name: 'MongoDB', icon: 'vscode-icons:file-type-mongo' },
     { name: 'MySQL', icon: 'logos:mysql' },
   ],
-  tools: [
+  Tools: [
     { name: 'Git', icon: 'logos:git-icon' },
     { name: 'Bash', icon: 'logos:bash-icon' },
   ]
