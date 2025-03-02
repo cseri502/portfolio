@@ -78,7 +78,7 @@ onUnmounted(() => {
 
 <template>
   <header class="w-full fixed top-0 z-50 transition-all duration-300 rounded-md"
-    :class="[isScrolled ? 'bg-white/80 dark:bg-gray-950/80 backdrop-blur-md' : 'bg-transparent']">
+    :class="[isScrolled ? 'bg-white/25 dark:bg-gray-950/80 backdrop-blur-md' : 'bg-transparent']">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex justify-between items-center py-3">
         <div class="flex items-center">
