@@ -45,11 +45,13 @@ const changeLanguage = (lang: string) => {
 }
 
 onMounted(() => {
-  setDefaultLanguage();
-
   const savedLanguage = localStorage.getItem('language')
+  
   if (savedLanguage) {
     currentLanguage.value = savedLanguage
+  }
+  else {
+    setDefaultLanguage();
   }
 })
 
