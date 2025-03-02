@@ -37,6 +37,12 @@ const flagIcon = computed(() => {
   return flags[currentLanguage.value as keyof typeof translations] || flags.en;
 })
 
+const languageOptions = [
+  { code: 'en', name: 'English', icon: 'twemoji:flag-united-kingdom' },
+  { code: 'hu', name: 'Magyar', icon: 'twemoji:flag-hungary' },
+  { code: 'de', name: 'Deutsch', icon: 'twemoji:flag-germany' }
+]
+
 const toggleMenu = () => {
   isMenuOpen.value = !isMenuOpen.value
   if (isMenuOpen.value) {
@@ -92,32 +98,19 @@ onUnmounted(() => {
             <button @click="toggleLanguageMenu"
               class="p-2 text-gray-700 dark:text-gray-300 hover:text-sky-500 dark:hover:text-sky-500 transition-colors duration-200 bg-gray-200/50 dark:bg-gray-800/50 rounded-md flex items-center"
               aria-label="Change language">
-              <Icon
-                :icon="flagIcon"
-                class="w-5 h-5" />
+              <Icon :icon="flagIcon" class="w-5 h-5" />
               <Icon icon="ph:caret-down" class="w-4 h-4 ml-1" />
             </button>
 
             <!-- Language Dropdown -->
             <div v-if="isLanguageMenuOpen"
               class="absolute right-0 mt-2 w-40 bg-white/90 dark:bg-gray-800/90 backdrop-blur-md rounded-md shadow-lg py-1 z-50">
-              <button @click="changeLanguage('en')"
+              <button v-for="option in languageOptions" :key="option.code"
+                @click="changeLanguage(option.code)"
                 class="flex items-center w-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100/80 dark:hover:bg-gray-700/80"
-                :class="{ 'bg-gray-100/80 dark:bg-gray-700/80': currentLanguage === 'en' }">
-                <Icon icon="twemoji:flag-united-kingdom" class="w-5 h-5 mr-2" />
-                English
-              </button>
-              <button @click="changeLanguage('hu')"
-                class="flex items-center w-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100/80 dark:hover:bg-gray-700/80"
-                :class="{ 'bg-gray-100/80 dark:bg-gray-700/80': currentLanguage === 'hu' }">
-                <Icon icon="twemoji:flag-hungary" class="w-5 h-5 mr-2" />
-                Magyar
-              </button>
-              <button @click="changeLanguage('de')"
-                class="flex items-center w-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100/80 dark:hover:bg-gray-700/80"
-                :class="{ 'bg-gray-100/80 dark:bg-gray-700/80': currentLanguage === 'de' }">
-                <Icon icon="twemoji:flag-germany" class="w-5 h-5 mr-2" />
-                Deutsch
+                :class="{ 'bg-gray-100/80 dark:bg-gray-700/80': currentLanguage === option.code }">
+                <Icon :icon="option.icon" class="w-5 h-5 mr-2" />
+                {{ option.name }}
               </button>
             </div>
           </div>
@@ -136,31 +129,18 @@ onUnmounted(() => {
             <button @click="toggleLanguageMenu"
               class="p-2 text-gray-700 dark:text-gray-300 bg-gray-200/50 dark:bg-gray-800/50 rounded-md"
               aria-label="Change language">
-              <Icon
-                :icon="currentLanguage === 'en' ? 'twemoji:flag-united-kingdom' : currentLanguage === 'de' ? 'twemoji:flag-germany' : 'twemoji:flag-hungary'"
-                class="w-5 h-5" />
+              <Icon :icon="flagIcon" class="w-5 h-5" />
             </button>
 
-            <!-- Mobile Language Dropdown -->
+            <!-- Mobile Language Dropdown - Using same template as desktop -->
             <div v-if="isLanguageMenuOpen"
               class="absolute right-0 mt-2 w-40 bg-white/90 dark:bg-gray-800/90 backdrop-blur-md rounded-md shadow-lg py-1 z-50">
-              <button @click="changeLanguage('en')"
+              <button v-for="option in languageOptions" :key="option.code"
+                @click="changeLanguage(option.code)"
                 class="flex items-center w-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100/80 dark:hover:bg-gray-700/80"
-                :class="{ 'bg-gray-100/80 dark:bg-gray-700/80': currentLanguage === 'en' }">
-                <Icon icon="twemoji:flag-united-kingdom" class="w-5 h-5 mr-2" />
-                English
-              </button>
-              <button @click="changeLanguage('hu')"
-                class="flex items-center w-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100/80 dark:hover:bg-gray-700/80"
-                :class="{ 'bg-gray-100/80 dark:bg-gray-700/80': currentLanguage === 'hu' }">
-                <Icon icon="twemoji:flag-hungary" class="w-5 h-5 mr-2" />
-                Magyar
-              </button>
-              <button @click="changeLanguage('de')"
-                class="flex items-center w-full px-4 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100/80 dark:hover:bg-gray-700/80"
-                :class="{ 'bg-gray-100/80 dark:bg-gray-700/80': currentLanguage === 'de' }">
-                <Icon icon="twemoji:flag-germany" class="w-5 h-5 mr-2" />
-                Deutsch
+                :class="{ 'bg-gray-100/80 dark:bg-gray-700/80': currentLanguage === option.code }">
+                <Icon :icon="option.icon" class="w-5 h-5 mr-2" />
+                {{ option.name }}
               </button>
             </div>
           </div>
@@ -183,12 +163,10 @@ onUnmounted(() => {
 
     <!-- Mobile Navigation -->
     <div v-if="isMenuOpen" class="md:hidden bg-white/90 dark:bg-gray-900/90 backdrop-blur-md">
-      <div class="px-2 pt-2 pb-3 space-y-1">
-        <router-link @click="closeMenu" to="/#about" class="nav-link block">About</router-link>
-        <router-link @click="closeMenu" to="/#education" class="nav-link block">Education</router-link>
-        <router-link @click="closeMenu" to="/#skills" class="nav-link block">Skills</router-link>
-        <router-link @click="closeMenu" to="/projects" class="nav-link block">Projects</router-link>
-        <router-link @click="closeMenu" to="/#contact" class="nav-link block">Contact</router-link>
+      <div class="px-2 pt-2 pb-3 space-y-1 flex flex-col">
+        <router-link @click="closeMenu" v-for="item in t.navItems" :key="item.link" :to="item.link" class="nav-link block">
+          {{ item.text }}
+        </router-link>
       </div>
     </div>
   </header>
