@@ -1,6 +1,9 @@
 <script setup lang="ts">
 import { ref, onMounted, onUnmounted, computed, inject } from 'vue'
 import { Icon } from '@iconify/vue'
+import en from '../locales/en.json';
+import de from '../locales/de.json';
+import hu from '../locales/hu.json';
 
 defineProps<{
   isDarkMode: boolean,
@@ -15,34 +18,10 @@ const isScrolled = ref(false)
 const isLanguageMenuOpen = ref(false)
 
 const translations = {
-  en: {
-    navItems: [
-      { text: 'About', link: '/#about' },
-      { text: 'Education', link: '/#education' },
-      { text: 'Skills', link: '/#skills' },
-      { text: 'Projects', link: '/projects' },
-      { text: 'Contact', link: '/#contact' },
-    ],
-  },
-  hu: {
-    navItems: [
-      { text: 'Rólam', link: '/#about' },
-      { text: 'Oktatás', link: '/#education' },
-      { text: 'Ismeretek', link: '/#skills' },
-      { text: 'Projektek', link: '/projects' },
-      { text: 'Kapcsolat', link: '/#contact' },
-    ],
-  },
-  de: {
-    navItems: [
-      { text: 'Über mich', link: '/#about' },
-      { text: 'Ausbildung', link: '/#education' },
-      { text: 'Fähigkeiten', link: '/#skills' },
-      { text: 'Projekte', link: '/projects' },
-      { text: 'Kontakt', link: '/#contact' },
-    ],
-  }
-}
+  en,
+  de,
+  hu,
+};
 
 const t = computed(() => {
   return translations[currentLanguage.value as keyof typeof translations]
@@ -96,24 +75,7 @@ onUnmounted(() => {
 
         <!-- Desktop Navigation -->
         <nav class="hidden md:flex items-center space-x-4">
-          <router-link v-for="item in t.navItems" :to="item.link" class="nav-link inline-block relative cursor-pointer transition-all duration-300
-            before:content-['']
-            before:absolute
-            before:-bottom-1
-            before:left-1/2
-            before:-translate-x-1/2
-            before:w-0
-            before:h-0.5
-            before:rounded-full
-            before:opacity-0
-            before:transition-all
-            before:duration-300
-            before:bg-sky-500
-            hover:before:w-full
-            hover:before:opacity-100
-            dark:hover:text-sky-500
-            hover:text-sky-500">{{ item.text }}</router-link>
-          
+          <router-link v-for="item in t.navItems" :to="item.link" class="nav-link">{{ item.text }}</router-link>
         </nav>
 
         <div class="hidden md:flex items-center space-x-4">

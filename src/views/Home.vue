@@ -6,116 +6,17 @@ import SkillCard from '../components/SkillCard.vue'
 import EducationItem from '../components/EducationItem.vue'
 import ContactForm from '../components/ContactForm.vue'
 import Title from '../components/Title.vue'
-
-const currentLanguage = inject('language', ref('en'))
+import en from '../locales/en.json';
+import de from '../locales/de.json';
+import hu from '../locales/hu.json';
 
 const translations = {
-  en: {
-    hero: {
-      greeting: "Hi, I'm",
-      name: "David",
-      role: "Full Stack Developer & System Administrator",
-      learnMore: "Learn More",
-      contactMe: "Contact Me"
-    },
-    about: {
-      title: "About Me",
-      content: "I'm a passionate Full Stack Developer and System Administrator with expertise in both frontend and backend technologies. With a strong foundation in networking and system administration, I bring a comprehensive understanding of the entire technology stack to my projects.",
-      cv: "Check my CV"
-    },
-    education: {
-      title: "Education"
-    },
-    skills: {
-      title: "Skills",
-      certifications: "Certifications"
-    },
-    projects: {
-      title: "Featured Projects",
-      description: "Here are some of my recent projects. Visit the projects page to see my complete portfolio.",
-      viewProject: "View Project",
-      viewAll: "View All Projects"
-    },
-    contact: {
-      title: "Get In Touch",
-      info: "Contact Information",
-      email: "Email",
-      github: "GitHub",
-      linkedin: "LinkedIn",
-      facebook: "Facebook"
-    }
-  },
-  hu: {
-    hero: {
-      greeting: "Szia, a nevem",
-      name: "Dávid",
-      role: "Full Stack Fejlesztő & Rendszergazda",
-      learnMore: "Tudj meg többet",
-      contactMe: "Kapcsolat"
-    },
-    about: {
-      title: "Rólam",
-      content: "Szenvedélyes Full Stack Fejlesztő és Rendszergazda vagyok, szakértelemmel mind a frontend, mind a backend technológiákban. A hálózati és rendszeradminisztrációban szerzett erős alapokkal átfogó ismeretekkel rendelkezem a teljes technológiai stack-ről.",
-      cv: "Önéletrajzom"
-    },
-    education: {
-      title: "Tanulmányok"
-    },
-    skills: {
-      title: "Ismeretek",
-      certifications: "Tanúsítványok"
-    },
-    projects: {
-      title: "Kiemelt Projektek",
-      description: "Íme néhány a legutóbbi projektjeim közül. Látogasd meg a projektek oldalt a teljes portfólióm megtekintéséhez.",
-      viewProject: "Projekt megtekintése",
-      viewAll: "Összes projekt megtekintése"
-    },
-    contact: {
-      title: "Kapcsolat",
-      info: "Elérhetőségek",
-      email: "Email",
-      github: "GitHub",
-      linkedin: "LinkedIn",
-      facebook: "Facebook"
-    }
-  },
-  de: {
-    hero: {
-      greeting: "Hallo, ich bin",
-      name: "David",
-      role: "Full Stack Entwickler & Systemadministrator",
-      learnMore: "Mehr erfahren",
-      contactMe: "Kontaktiere mich"
-    },
-    about: {
-      title: "Über mich",
-      content: "Ich bin ein leidenschaftlicher Full Stack Entwickler und Systemadministrator mit Fachkenntnissen in Frontend- und Backend-Technologien. Mit einer soliden Grundlage in Netzwerktechnologie und Systemadministration bringe ich ein umfassendes Verständnis des gesamten Technologie-Stacks in meine Projekte ein.",
-      cv: "Mein Lebenslauf"
-    },
-    education: {
-      title: "Ausbildung"
-    },
-    skills: {
-      title: "Meine Fähigkeiten",
-      certifications: "Zertifikate"
-    },
-    projects: {
-      title: "Ausgewählte Projekte",
-      description: "Hier sind einige meiner neuesten Projekte. Besuchen Sie die Projektseite, um mein vollständiges Portfolio zu sehen.",
-      viewProject: "Projekt ansehen",
-      viewAll: "Alle Projekte ansehen"
-    },
-    contact: {
-      title: "Kontakt aufnehmen",
-      info: "Kontaktinformationen",
-      email: "E-Mail",
-      github: "GitHub",
-      linkedin: "LinkedIn",
-      facebook: "Facebook"
-    }
-  }
-}
+  en,
+  de,
+  hu,
+};
+
+const currentLanguage = inject('language', ref('en'))
 
 const t = computed(() => {
   return translations[currentLanguage.value as keyof typeof translations]

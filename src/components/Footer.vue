@@ -1,20 +1,17 @@
 <script setup lang="ts">
 import { Icon } from '@iconify/vue'
 import { computed, inject, ref } from 'vue'
-
-const currentLanguage = inject('language', ref('en'))
+import en from '../locales/en.json';
+import de from '../locales/de.json';
+import hu from '../locales/hu.json';
 
 const translations = {
-  en: {
-    message: "Made with lots of 💖 and some ☕.",
-  },
-  hu: {
-    message: "Készült sok 💖-tel, és némi ☕-val.",
-  },
-  de: {
-    message: "Hergestellt mit viel 💖 und etwas ☕.",
-  }
-}
+  en,
+  de,
+  hu,
+};
+
+const currentLanguage = inject('language', ref('en'))
 
 const t = computed(() => {
   return translations[currentLanguage.value as keyof typeof translations]
@@ -26,7 +23,7 @@ const t = computed(() => {
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex flex-col md:flex-row justify-between items-center">
         <div class="mb-4 md:mb-0">
-          <p class="text-gray-600 dark:text-gray-400">{{ t.message }}</p>
+          <p class="text-gray-600 dark:text-gray-400">{{ t.footer.text }}</p>
         </div>
         <div class="flex space-x-4">
           <a href="https://github.com/cseri502" target="_blank" rel="noopener noreferrer"

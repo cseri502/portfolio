@@ -1,0 +1,54 @@
+{
+    "hero": {
+        "greeting": "Hallo, ich bin",
+        "name": "David",
+        "role": "Software-Entwickler & Systemadministrator",
+        "learnMore": "Mehr erfahren",
+        "contactMe": "Kontaktiere mich"
+    },
+    "about": {
+        "title": "Über mich",
+        "content": "Ich bin ein leidenschaftlicher Full Stack Entwickler und Systemadministrator mit Fachkenntnissen in Frontend- und Backend-Technologien. Mit einer soliden Grundlage in Netzwerktechnologie und Systemadministration bringe ich ein umfassendes Verständnis des gesamten Technologie-Stacks in meine Projekte ein.",
+        "cv": "Mein Lebenslauf"
+    },
+    "education": {
+        "title": "Ausbildung"
+    },
+    "skills": {
+        "title": "Meine Fähigkeiten",
+        "certifications": "Zertifikate"
+    },
+    "projects": {
+        "title": "Ausgewählte Projekte",
+        "description": "Hier sind einige meiner neuesten Projekte. Besuchen Sie die Projektseite, um mein vollständiges Portfolio zu sehen.",
+        "viewProject": "Projekt ansehen",
+        "viewAll": "Alle Projekte ansehen"
+    },
+    "contact": {
+        "title": "Kontakt aufnehmen",
+        "info": "Kontaktinformationen",
+        "email": "E-Mail",
+        "github": "GitHub",
+        "linkedin": "LinkedIn",
+        "facebook": "Facebook"
+    },
+    "navItems": [
+        { "text": "Über mich", "link": "/#about" },
+        { "text": "Ausbildung", "link": "/#education" },
+        { "text": "Fähigkeiten", "link": "/#skills" },
+        { "text": "Projekte", "link": "/projects" },
+        { "text": "Kontakt", "link": "/#contact" }
+    ],
+    "footer": {
+        "text": "Hergestellt mit viel 💖 und etwas ☕."
+    },
+    "contactForm": {
+        "title": "Nachricht senden",
+        "name": "Name",
+        "email": "E-Mail",
+        "message": "Nachricht",
+        "success": "Ihre Nachricht wurde erfolgreich gesendet!",
+        "sending": "Senden...",
+        "send": "Nachricht senden"
+    }
+}

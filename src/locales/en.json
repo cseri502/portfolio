@@ -1,0 +1,54 @@
+{
+    "hero": {
+        "greeting": "Hi, I'm",
+        "name": "David",
+        "role": "Software Developer & System Administrator",
+        "learnMore": "Learn More",
+        "contactMe": "Contact Me"
+    },
+    "about": {
+        "title": "About Me",
+        "content": "I'm a passionate Software Developer and System Administrator with expertise in both frontend and backend technologies. With a strong foundation in networking and system administration, I bring a comprehensive understanding of the entire technology stack to my projects.",
+        "cv": "Check my CV"
+    },
+    "education": {
+        "title": "Education"
+    },
+    "skills": {
+        "title": "Skills",
+        "certifications": "Certifications"
+    },
+    "projects": {
+        "title": "Featured Projects",
+        "description": "Here are some of my recent projects. Visit the projects page to see my complete portfolio.",
+        "viewProject": "View Project",
+        "viewAll": "View All Projects"
+    },
+    "contact": {
+        "title": "Get In Touch",
+        "info": "Contact Information",
+        "email": "Email",
+        "github": "GitHub",
+        "linkedin": "LinkedIn",
+        "facebook": "Facebook"
+    },
+    "navItems": [
+        { "text": "About", "link": "/#about" },
+        { "text": "Education", "link": "/#education" },
+        { "text": "Skills", "link": "/#skills" },
+        { "text": "Projects", "link": "/projects" },
+        { "text": "Contact", "link": "/#contact" }
+    ],
+    "footer": {
+        "text": "Made with lots of 💖 and some ☕."
+    },
+    "contactForm": {
+        "title": "Send a Message",
+        "name": "Name",
+        "email": "Email",
+        "message": "Message",
+        "success": "Your message has been sent successfully!",
+        "sending": "Sending...",
+        "send": "Send Message"
+    }
+}
