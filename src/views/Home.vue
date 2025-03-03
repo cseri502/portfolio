@@ -54,19 +54,20 @@ const skillsByCategory = {
 
 const certificationsByCategory = {
   Networking: [
-    { name: 'Introduction to Networks', organization: 'Cisco CCNA', date: '2022' },
-    { name: 'Routing and Switching Essentials', organization: 'Cisco CCNA', date: '2022' },
-    { name: 'Scaling Networks', organization: 'Cisco CCNA', date: '2023' },
-    { name: 'Connecting Networks', organization: 'Cisco CCNA', date: '2023' },
+    { name: 'Introduction to Networks', organization: 'Cisco CCNA', date: 2022, file: 'CCNA_R-S-_Introduction_to_Networks_certificate.pdf' },
+    { name: 'Routing and Switching Essentials', organization: 'Cisco CCNA', date: 2022, file: 'CCNA_R-S-_Routing_and_Switching_Essentials_certificate.pdf' },
+    { name: 'Scaling Networks', organization: 'Cisco CCNA', date: 2023, file: 'CCNA_R-S-_Scaling_Networks_certificate.pdf' },
+    { name: 'Connecting Networks', organization: 'Cisco CCNA', date: 2023, file: 'CCNA_R-S-_Connecting_Networks_certificate.pdf' },
   ],
   Development: [
-    { name: 'HTML and CSS', organization: 'Certiport ITS', date: '2025' },
-    { name: 'JavaScript', organization: 'Certiport ITS', date: '2025' },
-    { name: 'Python', organization: 'Certiport ITS', date: '2025' },
-    { name: 'HTML5 Application Development', organization: 'Certiport ITS', date: '2025' },
+    { name: 'HTML and CSS', organization: 'Certiport ITS', date: 2025, file: 'Cert62865252306.pdf' },
+    { name: 'JavaScript', organization: 'Certiport ITS', date: 2025, file: 'Cert89412100609.pdf' },
+    { name: 'Python', organization: 'Certiport ITS', date: 2025, file: 'Cert83853654138.pdf' },
+    { name: 'HTML5 Application Development', organization: 'Certiport ITS', date: 2025, file: 'Cert6466175417.pdf' },
   ],
   System: [
-    { name: 'Device Configuration and Management', organization: 'Certiport ITS', date: '2025' },
+    { name: 'Device Configuration and Management', organization: 'Certiport ITS', date: 2025, file: 'Cert50761751679.pdf' },
+    { name: 'IT Essentials: PC Hardware and Software', organization: 'Cisco', date: 2021, file: 'IT_Essentials_certificate.pdf' },
   ]
 }
 
@@ -107,10 +108,15 @@ const displayedSkills = computed(() => {
 });
 
 const displayedCertifications = computed(() => {
+  let certifications: Array<{ name: string, organization: string, date: number, file: string }> = [];
+  
   if (activeCertCategory.value === 'All') {
-    return Object.values(certificationsByCategory).flat();
+    certifications = Object.values(certificationsByCategory).flat();
+  } else {
+    certifications = certificationsByCategory[activeCertCategory.value as keyof typeof certificationsByCategory] || [];
   }
-  return certificationsByCategory[activeCertCategory.value as keyof typeof certificationsByCategory] || [];
+  
+  return [...certifications].sort((a, b) => b.date - a.date);
 });
 
 const projects = [
@@ -256,7 +262,9 @@ const projects = [
                 class="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm border border-gray-100 dark:border-gray-700 flex items-start hover:shadow-md transition-shadow duration-200">
                 <Icon icon="ph:certificate" class="w-6 h-6 text-sky-500 mr-3 mt-1 flex-shrink-0" />
                 <div>
-                  <h4 class="font-medium text-gray-900 dark:text-white">{{ cert.name }}</h4>
+                  <a :href="`/certificates/${cert.file}`" target="_blank" rel="noopener noreferrer">
+                    <h4 class="font-medium text-gray-900 dark:text-white duration-200 transition-colors hover:text-sky-200 hover:underline cursor-pointer">{{ cert.name }}</h4>
+                  </a>
                   <p class="text-sm text-gray-600 dark:text-gray-400">{{ cert.organization }} | {{ cert.date }}</p>
                 </div>
               </div>

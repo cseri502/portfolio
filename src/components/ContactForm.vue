@@ -1,5 +1,6 @@
 <script setup lang="ts">
-import { ref, inject, computed } from 'vue'
+import { ref, inject, computed, onMounted } from 'vue'
+import emailjs from '@emailjs/browser'
 import en from '../locales/en.json';
 import de from '../locales/de.json';
 import hu from '../locales/hu.json';
@@ -23,26 +24,39 @@ const isSubmitting = ref(false)
 const isSuccess = ref(false)
 const errorMessage = ref('')
 
+onMounted(() => {
+  emailjs.init({
+    publicKey: "GgbAAqKVbpFjjp3g-"
+  })
+})
+
 const submitForm = async () => {
   isSubmitting.value = true
   errorMessage.value = ''
 
   try {
-    // TODO: implement actual form submission logic
-    // Simulate form submission delay
-    await new Promise(resolve => setTimeout(resolve, 1000))
+    const templateParams = {
+      from_name: name.value,
+      from_email: email.value,
+      message: message.value
+    }
 
-    // Simulate successful submission
+    await emailjs.send(
+      "service_lrzhv2g",
+      "template_akr5e3b",
+      templateParams
+    )
+
     isSuccess.value = true
     name.value = ''
     email.value = ''
     message.value = ''
 
-    // Reset success message after 5 seconds
     setTimeout(() => {
       isSuccess.value = false
     }, 5000)
   } catch (error) {
+    console.error("Error sending email:", error)
     errorMessage.value = 'There was an error sending your message. Please try again.'
   } finally {
     isSubmitting.value = false
