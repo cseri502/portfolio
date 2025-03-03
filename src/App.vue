@@ -1,10 +1,15 @@
 <script setup lang="ts">
-import { ref, watch, onMounted, provide } from 'vue'
+import { ref, watch, onMounted, provide, computed } from 'vue'
 import axios from 'axios'
 import { useRoute } from 'vue-router'
+import { useDark, useToggle } from '@vueuse/core'
 import Navbar from './components/Navbar.vue'
 import Footer from './components/Footer.vue'
-import { useDark, useToggle } from '@vueuse/core'
+import en from './locales/en.json';
+import de from './locales/de.json';
+import hu from './locales/hu.json';
+
+const translations = { en, de, hu };
 
 const isDark = useDark({
   selector: 'html',
@@ -18,6 +23,10 @@ const route = useRoute()
 const currentLanguage = ref('en')
 
 provide('language', currentLanguage)
+
+const t = computed(() => {
+  return translations[currentLanguage.value as keyof typeof translations]
+});
 
 async function setDefaultLanguage() {
   try {
@@ -42,13 +51,7 @@ async function setDefaultLanguage() {
 const changeLanguage = (lang: string) => {
   currentLanguage.value = lang
   localStorage.setItem('language', lang)
-
-  if (['en', 'de'].includes(lang)) {
-    document.title = 'David | Portfolio'
-  }
-  else {
-    document.title = 'Dávid | Portfólió'
-  }
+  document.title = t.value.title;
 }
 
 onMounted(() => {
