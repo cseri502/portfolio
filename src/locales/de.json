@@ -15,8 +15,10 @@
         "title": "Ausbildung"
     },
     "skills": {
-        "title": "Meine Fähigkeiten",
-        "certifications": "Zertifikate"
+        "title": "Fertigkeiten",
+        "categories": ["Alle", "Frontend", "Backend", "Datenbanken", "Sonstige"],
+        "certifications": "Zertifikate",
+        "certCategories": ["Alle", "Netzwerke", "Entwicklung", "IT"]
     },
     "projects": {
         "title": "Ausgewählte Projekte",

@@ -16,7 +16,9 @@
     },
     "skills": {
         "title": "Skills",
-        "certifications": "Certifications"
+        "categories": ["All", "Frontend", "Backend", "Databases", "Other"],
+        "certifications": "Certifications",
+        "certCategories": ["All", "Networking", "Development", "IT"]
     },
     "projects": {
         "title": "Featured Projects",

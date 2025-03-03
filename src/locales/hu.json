@@ -16,7 +16,9 @@
     },
     "skills": {
         "title": "Ismeretek",
-        "certifications": "Tanúsítványok"
+        "categories": ["Összes", "Frontend", "Backend", "Adatbázisok", "Egyéb"],
+        "certifications": "Tanúsítványok",
+        "certCategories": ["Összes", "Hálózatok", "Fejlesztés", "IT"]
     },
     "projects": {
         "title": "Kiemelt Projektek",
@@ -34,7 +36,7 @@
     },
     "navItems": [
         { "text": "Rólam", "link": "/#about" },
-        { "text": "Oktatás", "link": "/#education" },
+        { "text": "Tanulmányok", "link": "/#education" },
         { "text": "Ismeretek", "link": "/#skills" },
         { "text": "Projektek", "link": "/projects" },
         { "text": "Kapcsolat", "link": "/#contact" }
