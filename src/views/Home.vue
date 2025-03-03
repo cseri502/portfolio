@@ -5,135 +5,26 @@ import SkillCard from '../components/SkillCard.vue'
 import EducationItem from '../components/EducationItem.vue'
 import ContactForm from '../components/ContactForm.vue'
 import Title from '../components/Title.vue'
+import skillsData from '../data/skills.json'
+import certificationsData from '../data/certifications.json'
 import en from '../locales/en.json'
 import de from '../locales/de.json'
 import hu from '../locales/hu.json'
 
-const translations = {
-  en,
-  de,
-  hu,
-}
+const translations = { en, de, hu };
+const skills = skillsData.items;
+const skillCategories = skillsData.categories;
+const certifications = certificationsData.items;
+const certCategories = certificationsData.categories;
 
-const currentLanguage = inject('language', ref('en'))
+const currentLanguage = inject('language', ref('en'));
+
+const activeSkillCategory = ref(skillCategories.All);
+const activeCertCategory = ref(certCategories.All);
 
 const t = computed(() => {
   return translations[currentLanguage.value as keyof typeof translations]
 })
-
-enum SkillCategories {
-  'All' = 0,
-  'Frontend' = 1,
-  'Backend' = 2,
-  'Database' = 3,
-  'Other' = 4,
-}
-
-const skills = [
-  { name: 'HTML', icon: 'vscode-icons:file-type-html', category: SkillCategories.Frontend },
-  { name: 'CSS', icon: 'devicon:css3', category: SkillCategories.Frontend },
-  { name: 'SASS', icon: 'vscode-icons:file-type-sass', category: SkillCategories.Frontend },
-  { name: 'LESS', icon: 'vscode-icons:file-type-less', category: SkillCategories.Frontend },
-  { name: 'JavaScript', icon: 'vscode-icons:file-type-js-official', category: SkillCategories.Frontend },
-  { name: 'TypeScript', icon: 'vscode-icons:file-type-typescript-official', category: SkillCategories.Frontend },
-  { name: 'jQuery', icon: 'devicon:jquery', category: SkillCategories.Frontend },
-  { name: 'Vue', icon: 'devicon:vuejs', category: SkillCategories.Frontend },
-  { name: 'React', icon: 'devicon:react', category: SkillCategories.Frontend },
-  { name: 'TailwindCSS', icon: 'vscode-icons:file-type-tailwind', category: SkillCategories.Frontend },
-  { name: 'Bootstrap', icon: 'logos:bootstrap', category: SkillCategories.Frontend },
-  
-  { name: 'C#', icon: 'devicon:csharp', category: SkillCategories.Backend },
-  { name: 'C++', icon: 'vscode-icons:file-type-cpp3', category: SkillCategories.Backend },
-  { name: 'Python', icon: 'vscode-icons:file-type-python', category: SkillCategories.Backend },
-  { name: 'ASP.NET', icon: 'logos:dotnet', category: SkillCategories.Backend },
-  { name: 'Node.JS', icon: 'logos:nodejs-icon', category: SkillCategories.Backend },
-  
-  { name: 'MongoDB', icon: 'vscode-icons:file-type-mongo', category: SkillCategories.Database },
-  { name: 'MySQL', icon: 'logos:mysql', category: SkillCategories.Database },
-  
-  { name: 'Git', icon: 'logos:git-icon', category: SkillCategories.Other },
-  { name: 'Bash', icon: 'logos:bash-icon', category: SkillCategories.Other },
-]
-
-enum CertCategories {
-  'All' = 0,
-  'Networking' = 1,
-  'Development' = 2,
-  'IT' = 3,
-}
-
-const certifications = [
-  {
-    name: 'Introduction to Networks',
-    organization: 'Cisco CCNA',
-    date: 2022,
-    file: 'CCNA_R-S-_Introduction_to_Networks_certificate.pdf',
-    category: CertCategories.Networking
-  },
-  {
-    name: 'Routing and Switching Essentials',
-    organization: 'Cisco CCNA',
-    date: 2022,
-    file: 'CCNA_R-S-_Routing_and_Switching_Essentials_certificate.pdf',
-    category: CertCategories.Networking
-  },
-  {
-    name: 'Scaling Networks',
-    organization: 'Cisco CCNA',
-    date: 2023,
-    file: 'CCNA_R-S-_Scaling_Networks_certificate.pdf',
-    category: CertCategories.Networking
-  },
-  {
-    name: 'Connecting Networks',
-    organization: 'Cisco CCNA',
-    date: 2023,
-    file: 'CCNA_R-S-_Connecting_Networks_certificate.pdf',
-    category: CertCategories.Networking
-  },
-  {
-    name: 'HTML and CSS',
-    organization: 'Certiport ITS',
-    date: 2025,
-    file: 'Cert62865252306.pdf',
-    category: CertCategories.Development
-  },
-  {
-    name: 'JavaScript',
-    organization: 'Certiport ITS',
-    date: 2025,
-    file: 'Cert89412100609.pdf',
-    category: CertCategories.Development
-  },
-  {
-    name: 'Python',
-    organization: 'Certiport ITS',
-    date: 2025,
-    file: 'Cert83853654138.pdf',
-    category: CertCategories.Development
-  },
-  {
-    name: 'HTML5 Application Development',
-    organization: 'Certiport ITS',
-    date: 2025,
-    file: 'Cert6466175417.pdf',
-    category: CertCategories.Development
-  },
-  {
-    name: 'Device Configuration and Management',
-    organization: 'Certiport ITS',
-    date: 2025,
-    file: 'Cert50761751679.pdf',
-    category: CertCategories.IT
-  },
-  {
-    name: 'IT Essentials: PC Hardware and Software',
-    organization: 'Cisco',
-    date: 2021,
-    file: 'IT_Essentials_certificate.pdf',
-    category: CertCategories.IT
-  }
-];
 
 const sortedEducation = computed(() => {
   return t.value.education.items.sort((a, b) => {
@@ -144,18 +35,15 @@ const sortedEducation = computed(() => {
   });
 });
 
-const activeSkillCategory = ref(SkillCategories.All);
-const activeCertCategory = ref(CertCategories.All);
-
 const displayedSkills = computed(() => {
-  if (activeSkillCategory.value === SkillCategories.All) {
+  if (activeSkillCategory.value === skillCategories.All) {
     return skills;
   }
   return skills.filter(skill => skill.category === activeSkillCategory.value);
 });
 
 const displayedCertifications = computed(() => {
-  if (activeCertCategory.value === CertCategories.All) {
+  if (activeCertCategory.value === certCategories.All) {
     return [...certifications].sort((a, b) => b.date - a.date);
   }
 

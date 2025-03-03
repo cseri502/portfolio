@@ -1,0 +1,34 @@
+{
+    "categories": {
+      "All": 0,
+      "Frontend": 1,
+      "Backend": 2,
+      "Database": 3,
+      "Other": 4
+    },
+    "items": [
+      { "name": "HTML", "icon": "vscode-icons:file-type-html", "category": 1 },
+      { "name": "CSS", "icon": "devicon:css3", "category": 1 },
+      { "name": "SASS", "icon": "vscode-icons:file-type-sass", "category": 1 },
+      { "name": "LESS", "icon": "vscode-icons:file-type-less", "category": 1 },
+      { "name": "JavaScript", "icon": "vscode-icons:file-type-js-official", "category": 1 },
+      { "name": "TypeScript", "icon": "vscode-icons:file-type-typescript-official", "category": 1 },
+      { "name": "jQuery", "icon": "devicon:jquery", "category": 1 },
+      { "name": "Vue", "icon": "devicon:vuejs", "category": 1 },
+      { "name": "React", "icon": "devicon:react", "category": 1 },
+      { "name": "TailwindCSS", "icon": "vscode-icons:file-type-tailwind", "category": 1 },
+      { "name": "Bootstrap", "icon": "logos:bootstrap", "category": 1 },
+      
+      { "name": "C#", "icon": "devicon:csharp", "category": 2 },
+      { "name": "C++", "icon": "vscode-icons:file-type-cpp3", "category": 2 },
+      { "name": "Python", "icon": "vscode-icons:file-type-python", "category": 2 },
+      { "name": "ASP.NET", "icon": "logos:dotnet", "category": 2 },
+      { "name": "Node.JS", "icon": "logos:nodejs-icon", "category": 2 },
+      
+      { "name": "MongoDB", "icon": "vscode-icons:file-type-mongo", "category": 3 },
+      { "name": "MySQL", "icon": "logos:mysql", "category": 3 },
+      
+      { "name": "Git", "icon": "logos:git-icon", "category": 4 },
+      { "name": "Bash", "icon": "logos:bash-icon", "category": 4 }
+    ]
+  }

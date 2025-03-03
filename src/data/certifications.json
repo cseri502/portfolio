@@ -1,0 +1,80 @@
+{
+    "categories": {
+        "All": 0,
+        "Networking": 1,
+        "Development": 2,
+        "IT": 3
+    },
+    "items": [
+        {
+            "name": "Introduction to Networks",
+            "organization": "Cisco CCNA",
+            "date": 2022,
+            "file": "CCNA_R-S-_Introduction_to_Networks_certificate.pdf",
+            "category": 1
+        },
+        {
+            "name": "Routing and Switching Essentials",
+            "organization": "Cisco CCNA",
+            "date": 2022,
+            "file": "CCNA_R-S-_Routing_and_Switching_Essentials_certificate.pdf",
+            "category": 1
+        },
+        {
+            "name": "Scaling Networks",
+            "organization": "Cisco CCNA",
+            "date": 2023,
+            "file": "CCNA_R-S-_Scaling_Networks_certificate.pdf",
+            "category": 1
+        },
+        {
+            "name": "Connecting Networks",
+            "organization": "Cisco CCNA",
+            "date": 2023,
+            "file": "CCNA_R-S-_Connecting_Networks_certificate.pdf",
+            "category": 1
+        },
+        {
+            "name": "HTML and CSS",
+            "organization": "Certiport ITS",
+            "date": 2025,
+            "file": "Cert62865252306.pdf",
+            "category": 2
+        },
+        {
+            "name": "JavaScript",
+            "organization": "Certiport ITS",
+            "date": 2025,
+            "file": "Cert89412100609.pdf",
+            "category": 2
+        },
+        {
+            "name": "Python",
+            "organization": "Certiport ITS",
+            "date": 2025,
+            "file": "Cert83853654138.pdf",
+            "category": 2
+        },
+        {
+            "name": "HTML5 Application Development",
+            "organization": "Certiport ITS",
+            "date": 2025,
+            "file": "Cert6466175417.pdf",
+            "category": 2
+        },
+        {
+            "name": "Device Configuration and Management",
+            "organization": "Certiport ITS",
+            "date": 2025,
+            "file": "Cert50761751679.pdf",
+            "category": 3
+        },
+        {
+            "name": "IT Essentials: PC Hardware and Software",
+            "organization": "Cisco",
+            "date": 2021,
+            "file": "IT_Essentials_certificate.pdf",
+            "category": 3
+        }
+    ]
+}
