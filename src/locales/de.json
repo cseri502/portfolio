@@ -12,7 +12,24 @@
         "cv": "Mein Lebenslauf"
     },
     "education": {
-        "title": "Ausbildung"
+        "title": "Ausbildung",
+        "items": [
+            {
+                "institution": "DSZC Mechwart",
+                "degree": "IT-Systemadministrator (54 481 06)",
+                "startYear": 2019,
+                "endYear": 2024,
+                "description": "Spezialisiert auf Windows/Linux-Serverkonfiguration, Cisco-Netzwerke und Systemadministration."
+            },
+            {
+                "institution": "Universität Debrecen, Fakultät für Informatik",
+                "degree": "Bsc Informatik",
+                "startYear": 2024,
+                "endYear": null,
+                "description": "Derzeit studiere ich Informatik."
+            }
+        ],
+        "present": "Heute"
     },
     "skills": {
         "title": "Fertigkeiten",

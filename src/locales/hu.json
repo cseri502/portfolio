@@ -12,7 +12,24 @@
         "cv": "Önéletrajzom"
     },
     "education": {
-        "title": "Tanulmányok"
+        "title": "Tanulmányok",
+        "items": [
+            {
+                "institution": "DSZC Mechwart",
+                "degree": "Informatikai rendszerüzemeltető (54 481 06)",
+                "startYear": 2019,
+                "endYear": 2024,
+                "description": "Szakosodás Windows/Linux szerverkonfigurációra, Cisco hálózatok menedzselésére és rendszeradminisztrációra."
+            },
+            {
+                "institution": "Debreceni Egyetem, Informatikai Kar",
+                "degree": "Bsc Programtervező Informatikus",
+                "startYear": 2024,
+                "endYear": null,
+                "description": "Jelenleg Programtervező Informatikus szakon tanulok."
+            }
+        ],
+        "present": "Napjainkig"
     },
     "skills": {
         "title": "Ismeretek",

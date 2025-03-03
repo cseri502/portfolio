@@ -12,7 +12,24 @@
         "cv": "Check my CV"
     },
     "education": {
-        "title": "Education"
+        "title": "Education",
+        "items": [
+            {
+                "institution": "DSZC Mechwart",
+                "degree": "IT System Administrator (54 481 06)",
+                "startYear": 2019,
+                "endYear": 2024,
+                "description": "Specialized in Windows/Linux server configuration, Cisco networking and system administration."
+            },
+            {
+                "institution": "University of Debrecen, Faculty of Informatics",
+                "degree": "Bsc Computer Science",
+                "startYear": 2024,
+                "endYear": null,
+                "description": "Currently pursuing a degree in Computer Science."
+            }
+        ],
+        "present": "Present"
     },
     "skills": {
         "title": "Skills",

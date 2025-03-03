@@ -135,25 +135,8 @@ const certifications = [
   }
 ];
 
-const education = [
-  {
-    institution: 'DSZC Mechwart',
-    degree: 'System Administrator',
-    startYear: 2019,
-    endYear: 2024,
-    description: 'Specialized in Windows/Linux server administration, Cisco networking, and system administration.'
-  },
-  {
-    institution: 'DE-IK',
-    degree: 'Bsc Computer Science',
-    startYear: 2024,
-    endYear: null,
-    description: 'Currently pursuing a degree in Computer Science.'
-  }
-]
-
 const sortedEducation = computed(() => {
-  return education.sort((a, b) => {
+  return t.value.education.items.sort((a, b) => {
     if (a.startYear !== b.startYear) {
       return b.startYear - a.startYear;
     }
@@ -253,7 +236,7 @@ const projects = [
         <div class="max-w-3xl mx-auto">
           <div class="space-y-8">
             <EducationItem v-for="(edu, index) in sortedEducation" :key="index" :institution="edu.institution"
-              :degree="edu.degree" :period="`${edu.startYear} - ${edu.endYear || 'present'}`"
+              :degree="edu.degree" :period="`${edu.startYear} - ${edu.endYear || t.education.present}`"
               :description="edu.description" />
           </div>
         </div>
