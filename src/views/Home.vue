@@ -106,9 +106,7 @@ const projects = [
       <div class="section-container">
         <Title :title="t.about.title" />
         <div class="max-w-3xl mx-auto text-center">
-          <p class="text-lg text-gray-700 dark:text-gray-300 mb-8 leading-relaxed">
-            {{ t.about.content }}
-          </p>
+          <p class="text-lg text-gray-700 dark:text-gray-300 mb-8 leading-relaxed" v-html="t.about.content.replace(/\n/g, '<br>')"></p>
           <a href="/cv.pdf" target="_blank" class="btn btn-primary inline-flex items-center">
             <Icon icon="ph:file-pdf" class="mr-2 w-5 h-5" />
             {{ t.about.cv }}
@@ -160,8 +158,9 @@ const projects = [
 
         <!-- Certifications Section -->
         <div class="mt-16 pt-8 border-t border-gray-100 dark:border-gray-800">
-          <h3 class="text-center text-2xl font-bold mb-8 text-gray-900 dark:text-white">{{ t.skills.certifications }}
+          <h3 class="text-center text-2xl font-bold text-gray-900 dark:text-white">{{ t.skills.certifications }}
           </h3>
+          <p class="text-center text-gray-700 dark:text-gray-300 mb-8 max-w-2xl mx-auto">{{ t.skills.certInfo }}</p>
 
           <!-- Certification Tabs -->
           <div class="flex justify-center overflow-x-auto pb-2">

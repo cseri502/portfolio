@@ -9,7 +9,7 @@
     },
     "about": {
         "title": "Rólam",
-        "content": "Szenvedélyes Full Stack Fejlesztő és Rendszergazda vagyok, szakértelemmel mind a frontend, mind a backend technológiákban. A hálózati és rendszeradminisztrációban szerzett erős alapokkal átfogó ismeretekkel rendelkezem a teljes technológiai stack-ről.",
+        "content": "Mindig is vonzott a technológia és az alkotás szabadsága, ezért a fejlesztés vált a fő területemmé. Legyen szó backend rendszerekről, adatbázisokról vagy teljes alkalmazásokról, mindig arra törekszem, hogy tiszta, hatékony és skálázható megoldásokat hozzak létre.\n\nJelenleg a Debreceni Egyetemen tanulok programtervező informatikus szakon, hogy tovább mélyítsem tudásomat a szoftverfejlesztés területén. Korábban a DSZC Mechwart intézményben szereztem informatikai rendszerüzemeltető képesítést, amely során a hálózatok és a szerverüzemeltetés világába is betekintést nyertem. Ez a háttér lehetővé teszi, hogy ne csak a kód szintjén gondolkodjak, hanem az infrastruktúra és a rendszerek hatékony működésére is odafigyeljek.\n\nA folyamatos fejlődés és az új kihívások motiválnak, ezért mindig keresem azokat a projekteket, ahol kreativitásra, precizitásra és mély technikai tudásra van szükség. Ha szeretnél velem dolgozni, vedd fel velem a kapcsolatot!",
         "cv": "Önéletrajzom"
     },
     "education": {
@@ -36,6 +36,7 @@
         "title": "Ismeretek",
         "categories": ["Összes", "Frontend", "Backend", "Adatbázisok", "Egyéb"],
         "certifications": "Tanúsítványok",
+        "certInfo": "Kattints a tanúsítvány nevére a megnyitáshoz.",
         "certCategories": ["Összes", "Hálózatok", "Fejlesztés", "IT"]
     },
     "projects": {

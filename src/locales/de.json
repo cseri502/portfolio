@@ -9,7 +9,7 @@
     },
     "about": {
         "title": "Über mich",
-        "content": "Ich bin ein leidenschaftlicher Full Stack Entwickler und Systemadministrator mit Fachkenntnissen in Frontend- und Backend-Technologien. Mit einer soliden Grundlage in Netzwerktechnologie und Systemadministration bringe ich ein umfassendes Verständnis des gesamten Technologie-Stacks in meine Projekte ein.",
+        "content": "Ich war schon immer von Technologie und der Freiheit, etwas zu erschaffen, angezogen, weshalb die Entwicklung zu meinem Hauptschwerpunkt geworden ist. Egal, ob es sich um Backend-Systeme, Datenbanken oder vollständige Anwendungen handelt, ich bin immer bestrebt, saubere, effiziente und skalierbare Lösungen zu schaffen.\n\nIch studiere derzeit Informatik an der Universität Debrecen, um meine Kenntnisse in der Softwareentwicklung zu vertiefen. Zuvor habe ich am DSZC Mechwart eine Qualifikation in IT-Systemmanagement erworben, wo ich auch Einblicke in die Welt der Netzwerke und des Servermanagements erhielt. Dieser Hintergrund ermöglicht es mir, nicht nur auf der Code-Ebene zu denken, sondern mich auch auf den effizienten Betrieb der Infrastruktur und der Systeme zu konzentrieren.\n\nIch bin motiviert durch kontinuierliche Entwicklung und neue Herausforderungen, daher bin ich immer auf der Suche nach Projekten, bei denen Kreativität, Präzision und tiefes technisches Wissen gefragt sind. Wenn Sie mit mir zusammenarbeiten möchten, kontaktieren Sie mich!",
         "cv": "Mein Lebenslauf"
     },
     "education": {
@@ -36,6 +36,7 @@
         "title": "Fertigkeiten",
         "categories": ["Alle", "Frontend", "Backend", "Datenbanken", "Sonstige"],
         "certifications": "Zertifikate",
+        "certInfo": "Klicken Sie auf den Namen des Zertifikats, um es zu öffnen.",
         "certCategories": ["Alle", "Netzwerke", "Entwicklung", "IT"]
     },
     "projects": {
