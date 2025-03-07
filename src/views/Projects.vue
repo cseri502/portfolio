@@ -1,62 +1,30 @@
 <script setup lang="ts">
-import { ref, computed } from 'vue'
+import { ref, computed, inject } from 'vue'
 import { Icon } from '@iconify/vue'
 import ProjectCard from '../components/ProjectCard.vue'
 import Title from '../components/Title.vue'
+import projects from '../data/projects.json';
+import en from '../locales/en.json'
+import de from '../locales/de.json'
+import hu from '../locales/hu.json'
 
-const projects = ref([
-  {
-    id: 1,
-    title: 'Project One',
-    description: 'A brief description of the project and what technologies were used.',
-    image: null,
-    tags: ['Vue', 'TypeScript', 'TailwindCSS'],
-    github: 'https://github.com/cseri502/project-one',
-    demo: 'https://project-one-demo.com'
-  },
-  {
-    id: 2,
-    title: 'Project Two',
-    description: 'A brief description of the project and what technologies were used.',
-    image: null,
-    tags: ['React', 'Node.js', 'MongoDB'],
-    github: 'https://github.com/cseri502/project-two',
-    demo: 'https://project-two-demo.com'
-  },
-  {
-    id: 3,
-    title: 'Project Three',
-    description: 'A brief description of the project and what technologies were used.',
-    image: null,
-    tags: ['C#', 'ASP.NET', 'SQL'],
-    github: 'https://github.com/cseri502/project-three',
-    demo: null
-  },
-  {
-    id: 4,
-    title: 'Project Four',
-    description: 'A brief description of the project and what technologies were used.',
-    image: null,
-    tags: ['C++', 'Raylib', 'PostgreSQL'],
-    github: 'https://github.com/cseri502/project-four',
-    demo: 'https://project-four-demo.com'
-  }
-])
+const translations = { en, de, hu };
 
+const currentLanguage = inject('language', ref('en'));
 const filterTag = ref('')
 
 const filteredProjects = computed(() => {
   if (!filterTag.value) {
-    return projects.value
+    return projects
   }
-  return projects.value.filter(project =>
+  return projects.filter(project =>
     project.tags.some(tag => tag.toLowerCase().includes(filterTag.value.toLowerCase()))
   )
 })
 
 const allTags = computed(() => {
   const tags = new Set<string>()
-  projects.value.forEach(project => {
+  projects.forEach(project => {
     project.tags.forEach(tag => tags.add(tag))
   })
   return Array.from(tags).sort()
@@ -90,7 +58,15 @@ const allTags = computed(() => {
 
       <!-- Projects grid -->
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        <ProjectCard v-for="project in filteredProjects" :key="project.id" :project="project" />
+        <ProjectCard v-for="project in filteredProjects" :key="project.id" :project="{
+          id: project.id,
+          title: project.title,
+          description: project.description[currentLanguage as keyof typeof translations],
+          demo: project.demo,
+          github: project.github,
+          image: project.image,
+          tags: project.tags
+        }" />
       </div>
 
       <!-- Empty state -->

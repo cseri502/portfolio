@@ -1,0 +1,172 @@
+[
+    {
+        "id": 1,
+        "title": "Matrixia",
+        "description": {
+            "en": "A web application designed to perform matrix operations with ease.",
+            "hu": "A mátrixműveletek egyszerű végrehajtására tervezett webalkalmazás.",
+            "de": "Eine Webanwendung, mit der sich Matrixoperationen problemlos durchführen lassen."
+        },
+        "image": null,
+        "tags": ["Vue", "TypeScript", "TailwindCSS", "C#", ".NET"],
+        "github": "https://github.com/cseri502/Matrixia",
+        "demo": null,
+        "features": {
+            "en": [
+                "Determinant calculation",
+                "Matrix rank",
+                "Matrix inversion",
+                "Transpose matrix",
+                "Adjoint (or adjugate) calculation"
+            ],
+            "hu": [
+                "Determináns számítás",
+                "Mátrix rang",
+                "Mátrix invertálás",
+                "Mátrix transzponálás",
+                "Adjungált számítás"
+            ],
+            "de": [
+                "Determinantenberechnung",
+                "Matrixrang",
+                "Matrixinversion",
+                "Matrix transponieren",
+                "Adjungierte (oder Koadjungierte) Berechnung"
+            ]
+        }
+    },
+    {
+        "id": 2,
+        "title": "Image Editor",
+        "description": {
+            "en": "A modern, user-friendly web application built with React, TypeScript, and Tailwind CSS that allows users to edit images directly in their browser.",
+            "hu": "Egy modern, felhasználóbarát webalkalmazás React, TypeScript és Tailwind CSS alapokon, amely lehetővé teszi a képek közvetlen böngészőben történő szerkesztését.",
+            "de": "Eine moderne, benutzerfreundliche Webanwendung, die mit React, TypeScript und Tailwind CSS erstellt wurde und es Benutzern ermöglicht, Bilder direkt im Browser zu bearbeiten."
+        },
+        "image": null,
+        "tags": ["React", "TypeScript", "TailwindCSS"],
+        "github": "https://github.com/cseri502/image-editor",
+        "demo": null,
+        "features": {
+            "en": [
+                "Image upload via drag-and-drop or file selection",
+                "Brightness adjustment (0-200%)",
+                "Grayscale effect (0-100%)",
+                "Saturation adjustment (0-200%)",
+                "Sepia effect (0-100%)",
+                "Blur effect (0-20px)",
+                "Rotate left/right (90-degree increments)",
+                "Flip horizontal",
+                "Flip vertical",
+                "Dark/light mode with system preference detection",
+                "Responsive design",
+                "Real-time preview of adjustments",
+                "Reset functionality",
+                "One-click image download with applied effects"
+            ],
+            "hu": [
+                "Kép feltöltése drag-and-drop vagy fájlválasztás segítségével",
+                "Fényerő beállítás (0-200%)",
+                "Szürkeárnyalatos effekt (0-100%)",
+                "Telítettség módosítása (0-200%)",
+                "Szépia effekt (0-100%)",
+                "Elmosás effekt (0-20px)",
+                "Forgatás balra/jobbra (90 fokos lépésekben)",
+                "Vízszintes tükrözés",
+                "Függőleges tükrözés",
+                "Sötét/világos mód rendszerbeállítás alapján",
+                "Reszponzív kialakítás",
+                "Valós idejű előnézet",
+                "Visszaállítás funkció",
+                "Egyszerű képletöltés az alkalmazott effektekkel"
+            ],
+            "de": [
+                "Bild-Upload per Drag-and-Drop oder Dateiauswahl",
+                "Helligkeitseinstellung (0-200%)",
+                "Graustufeneffekt (0-100%)",
+                "Sättigungsanpassung (0-200%)",
+                "Sepia-Effekt (0-100%)",
+                "Unschärfe-Effekt (0-20px)",
+                "Drehen nach links/rechts (90-Grad-Schritte)",
+                "Horizontal spiegeln",
+                "Vertikal spiegeln",
+                "Dunkel-/Hellmodus mit Systemvoreinstellung",
+                "Responsives Design",
+                "Echtzeit-Vorschau der Anpassungen",
+                "Zurücksetzen-Funktion",
+                "Ein-Klick-Bild-Download mit angewendeten Effekten"
+            ]
+        }
+    },
+    {
+        "id": 3,
+        "title": "Portfolio website",
+        "description": {
+            "en": "A modern and clean website that showcases my projects, skills and professional experience.",
+            "hu": "Modern és letisztult weboldal, amely bemutatja projektjeimet, készségeimet és szakmai tapasztalataimat.",
+            "de": "Eine moderne und übersichtliche Website, die meine Projekte, Fähigkeiten und Berufserfahrung präsentiert."
+        },
+        "image": null,
+        "tags": ["Vue", "TypeScript", "TailwindCSS"],
+        "github": "https://github.com/cseri502/vue-portfolio",
+        "demo": null,
+        "features": {
+            "en": [
+                "TODO: list features"
+            ],
+            "hu": [],
+            "de": []
+        }
+    },
+    {
+        "id": 4,
+        "title": "Password Generator",
+        "description": {
+            "en": "A web application that allows users to generate secure passwords based on customizable settings.",
+            "hu": "Egy webalkalmazás, amely lehetővé teszi biztonságos jelszavak generálását testreszabható beállítások alapján.",
+            "de": "Eine Webanwendung, die es Benutzern ermöglicht, sichere Passwörter basierend auf anpassbaren Einstellungen zu generieren."
+        },
+        "image": null,
+        "tags": ["Vue", "TypeScript", "TailwindCSS"],
+        "github": "https://github.com/cseri502/password-generator",
+        "demo": null,
+        "features": {
+            "en": [
+                "Generate secure passwords with customizable settings",
+                "Adjust password length (8-32 characters)",
+                "Include or exclude uppercase letters (A-Z)",
+                "Include or exclude lowercase letters (a-z)",
+                "Include or exclude numbers (0-9)",
+                "Include or exclude special symbols (!, @, #, $, etc.)",
+                "One-click password copying",
+                "Real-time password preview",
+                "User-friendly slider for password length selection",
+                "Responsive design for all screen sizes"
+            ],
+            "hu": [
+                "Biztonságos jelszavak generálása testreszabható beállításokkal",
+                "Jelszó hosszának beállítása (8-32 karakter)",
+                "Nagybetűk hozzáadása vagy kihagyása (A-Z)",
+                "Kisbetűk hozzáadása vagy kihagyása (a-z)",
+                "Számok hozzáadása vagy kihagyása (0-9)",
+                "Speciális karakterek hozzáadása vagy kihagyása (!, @, #, $, stb.)",
+                "Jelszó egy kattintással másolható",
+                "Valós idejű jelszó előnézet",
+                "Felhasználóbarát csúszka a jelszó hosszának kiválasztásához",
+                "Reszponzív kialakítás minden eszközre"
+            ],
+            "de": [
+                "Sichere Passwörter mit anpassbaren Einstellungen generieren",
+                "Passwortlänge anpassen (8-32 Zeichen)",
+                "Großbuchstaben hinzufügen oder ausschließen (A-Z)",
+                "Kleinbuchstaben hinzufügen oder ausschließen (a-z)",
+                "Zahlen hinzufügen oder ausschließen (0-9)",
+                "Sonderzeichen hinzufügen oder ausschließen (!, @, #, $, etc.)",
+                "Ein-Klick-Passwortkopie",
+                "Echtzeit-Vorschau des Passworts",
+                "Benutzerfreundlicher Schieberegler zur Auswahl der Passwortlänge",
+                "Responsives Design für alle Bildschirmgrößen"
+            ]
+        }
+    }
+]

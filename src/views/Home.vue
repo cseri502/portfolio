@@ -7,6 +7,7 @@ import ContactForm from '../components/ContactForm.vue'
 import Title from '../components/Title.vue'
 import skillsData from '../data/skills.json'
 import certificationsData from '../data/certifications.json'
+import projectsData from '../data/projects.json';
 import en from '../locales/en.json'
 import de from '../locales/de.json'
 import hu from '../locales/hu.json'
@@ -51,25 +52,6 @@ const displayedCertifications = computed(() => {
     .filter(cert => cert.category === activeCertCategory.value)
     .sort((a, b) => b.date - a.date);
 });
-
-const projects = [
-  {
-    id: 1,
-    title: 'Portfolio Website',
-    description: 'Personal portfolio built with Vue.js and TailwindCSS',
-    image: null, // Will be replaced with actual image later
-    technologies: ['Vue', 'TypeScript', 'TailwindCSS'],
-    link: '/projects/1'
-  },
-  {
-    id: 2,
-    title: 'Task Management App',
-    description: 'A full-stack application for managing tasks and projects',
-    image: null, // Will be replaced with actual image later
-    technologies: ['React', 'Node.js', 'MongoDB'],
-    link: '/projects/2'
-  }
-]
 </script>
 
 <template>
@@ -205,21 +187,21 @@ const projects = [
         </p>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div v-for="project in projects" :key="project.id"
+          <div v-for="project in projectsData.slice(0, 2)" :key="project.id"
             class="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
             <div class="h-48 bg-gradient-to-r from-sky-500 to-indigo-500 flex items-center justify-center">
               <Icon icon="ph:code" class="w-16 h-16 text-white" />
             </div>
             <div class="p-6">
               <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">{{ project.title }}</h3>
-              <p class="text-gray-600 dark:text-gray-400 mb-4">{{ project.description }}</p>
+              <p class="text-gray-600 dark:text-gray-400 mb-4">{{ project.description[currentLanguage as keyof typeof translations] }}</p>
               <div class="flex flex-wrap gap-2 mb-4">
-                <span v-for="tech in project.technologies" :key="tech"
+                <span v-for="tech in project.tags" :key="tech"
                   class="text-xs px-2 py-1 bg-sky-500/10 text-sky-500 rounded-md">
                   {{ tech }}
                 </span>
               </div>
-              <router-link :to="project.link" class="btn btn-sm btn-primary inline-flex items-center mt-2">
+              <router-link :to="`projects/${project.id}`" class="btn btn-sm btn-primary inline-flex items-center mt-2">
                 {{ t.projects.viewProject }}
                 <Icon icon="ph:arrow-right" class="ml-1 w-4 h-4" />
               </router-link>
