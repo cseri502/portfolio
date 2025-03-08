@@ -7,7 +7,7 @@
             "hu": "A mátrixműveletek egyszerű végrehajtására tervezett webalkalmazás.",
             "de": "Eine Webanwendung, mit der sich Matrixoperationen problemlos durchführen lassen."
         },
-        "image": null,
+        "image": "/projects/matrixia.png",
         "tags": ["Vue", "TypeScript", "TailwindCSS", "C#", ".NET"],
         "github": "https://github.com/cseri502/Matrixia",
         "demo": null,
@@ -43,7 +43,7 @@
             "hu": "Egy modern, felhasználóbarát webalkalmazás React, TypeScript és Tailwind CSS alapokon, amely lehetővé teszi a képek közvetlen böngészőben történő szerkesztését.",
             "de": "Eine moderne, benutzerfreundliche Webanwendung, die mit React, TypeScript und Tailwind CSS erstellt wurde und es Benutzern ermöglicht, Bilder direkt im Browser zu bearbeiten."
         },
-        "image": null,
+        "image": "/projects/image-editor.png",
         "tags": ["React", "TypeScript", "TailwindCSS"],
         "github": "https://github.com/cseri502/image-editor",
         "demo": null,
@@ -106,7 +106,7 @@
             "hu": "Modern és letisztult weboldal, amely bemutatja projektjeimet, készségeimet és szakmai tapasztalataimat.",
             "de": "Eine moderne und übersichtliche Website, die meine Projekte, Fähigkeiten und Berufserfahrung präsentiert."
         },
-        "image": null,
+        "image": "/projects/portfolio-website.png",
         "tags": ["Vue", "TypeScript", "TailwindCSS"],
         "github": "https://github.com/cseri502/vue-portfolio",
         "demo": null,
@@ -126,7 +126,7 @@
             "hu": "Egy webalkalmazás, amely lehetővé teszi biztonságos jelszavak generálását testreszabható beállítások alapján.",
             "de": "Eine Webanwendung, die es Benutzern ermöglicht, sichere Passwörter basierend auf anpassbaren Einstellungen zu generieren."
         },
-        "image": null,
+        "image": "/projects/password-generator.png",
         "tags": ["Vue", "TypeScript", "TailwindCSS"],
         "github": "https://github.com/cseri502/password-generator",
         "demo": null,
