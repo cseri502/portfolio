@@ -43,12 +43,12 @@ const allTags = computed(() => {
       <!-- Filter by tag -->
       <div class="mb-8">
         <div class="flex flex-wrap gap-2">
-          <button @click="filterTag = ''" class="px-3 py-1 text-sm transition-colors duration-200 rounded-sm"
+          <button @click="filterTag = ''" class="px-3 py-1 text-sm transition-colors duration-200 rounded-sm cursor-pointer"
             :class="filterTag === '' ? 'bg-sky-500 text-white' : 'bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm text-gray-700 dark:text-gray-300 border border-gray-200/30 dark:border-gray-700/30'">
             {{ translations[currentLanguage as keyof typeof translations].projects.page.all }}
           </button>
           <button v-for="tag in allTags" :key="tag" @click="filterTag = tag"
-            class="px-3 py-1 text-sm transition-colors duration-200 rounded-sm"
+            class="px-3 py-1 text-sm transition-colors duration-200 rounded-sm cursor-pointer"
             :class="filterTag === tag ? 'bg-sky-500 text-white' : 'bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm text-gray-700 dark:text-gray-300 border border-gray-200/30 dark:border-gray-700/30'">
             {{ tag }}
           </button>

@@ -8,6 +8,7 @@ import Title from '../components/Title.vue'
 import skillsData from '../data/skills.json'
 import certificationsData from '../data/certifications.json'
 import projectsData from '../data/projects.json';
+import contactData from '../data/contacts.json';
 import en from '../locales/en.json'
 import de from '../locales/de.json'
 import hu from '../locales/hu.json'
@@ -52,6 +53,37 @@ const displayedCertifications = computed(() => {
     .filter(cert => cert.category === activeCertCategory.value)
     .sort((a, b) => b.date - a.date);
 });
+
+const contactItems = computed(() => [
+  {
+    icon: 'ph:envelope',
+    title: "Email",
+    value: contactData.email,
+    link: `mailto:${contactData.email}`,
+    external: false
+  },
+  {
+    icon: 'ph:github-logo',
+    title: "Github",
+    value: contactData.github,
+    link: contactData.github,
+    external: true
+  },
+  {
+    icon: 'ph:linkedin-logo',
+    title: "LinkedIn",
+    value: contactData.linkedIn,
+    link: contactData.linkedIn,
+    external: true
+  },
+  {
+    icon: 'ph:facebook-logo',
+    title: "Facebook",
+    value: contactData.facebook,
+    link: contactData.facebook,
+    external: true
+  }
+]);
 </script>
 
 <template>
@@ -88,7 +120,8 @@ const displayedCertifications = computed(() => {
       <div class="section-container">
         <Title :title="t.about.title" />
         <div class="max-w-3xl mx-auto text-center">
-          <p class="text-lg text-gray-700 dark:text-gray-300 mb-8 leading-relaxed" v-html="t.about.content.replace(/\n/g, '<br>')"></p>
+          <p class="text-lg text-gray-700 dark:text-gray-300 mb-8 leading-relaxed"
+            v-html="t.about.content.replace(/\n/g, '<br>')"></p>
           <a href="/cv.pdf" target="_blank" class="btn btn-primary inline-flex items-center">
             <Icon icon="ph:file-pdf" class="mr-2 w-5 h-5" />
             {{ t.about.cv }}
@@ -187,14 +220,16 @@ const displayedCertifications = computed(() => {
         </p>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div v-for="project in projectsData.filter(p => p.title === 'Matrixia' || p.title === 'Image Editor')" :key="project.id"
+          <div v-for="project in projectsData.filter(p => p.title === 'Matrixia' || p.title === 'Image Editor')"
+            :key="project.id"
             class="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
             <div class="h-48 bg-gradient-to-r from-sky-500 to-indigo-500 flex items-center justify-center">
               <Icon icon="ph:code" class="w-16 h-16 text-white" />
             </div>
             <div class="p-6">
               <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">{{ project.title }}</h3>
-              <p class="text-gray-600 dark:text-gray-400 mb-4">{{ project.description[currentLanguage as keyof typeof translations] }}</p>
+              <p class="text-gray-600 dark:text-gray-400 mb-4">{{ project.description[currentLanguage as keyof typeof
+                translations] }}</p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span v-for="tech in project.tags" :key="tech"
                   class="text-xs px-2 py-1 bg-sky-500/10 text-sky-500 rounded-md">
@@ -228,54 +263,16 @@ const displayedCertifications = computed(() => {
               <h3 class="text-xl font-semibold mb-6 text-gray-900 dark:text-white">{{ t.contact.info }}</h3>
 
               <div class="space-y-6">
-                <div class="flex items-start">
+                <div v-for="(item, index) in contactItems" :key="index" class="flex items-start">
                   <div class="bg-sky-500/10 p-3 rounded-full mr-4">
-                    <Icon icon="ph:envelope" class="w-5 h-5 text-sky-500" />
+                    <Icon :icon="item.icon" class="w-5 h-5 text-sky-500" />
                   </div>
                   <div>
-                    <h4 class="font-medium text-gray-900 dark:text-white">{{ t.contact.email }}</h4>
-                    <a href="mailto:david@mailbox.com"
+                    <h4 class="font-medium text-gray-900 dark:text-white">{{ item.title }}</h4>
+                    <a :href="item.link" :target="item.external ? '_blank' : ''"
+                      :rel="item.external ? 'noopener noreferrer' : ''"
                       class="text-gray-600 dark:text-gray-400 hover:text-sky-500 dark:hover:text-sky-500">
-                      david@mailbox.com
-                    </a>
-                  </div>
-                </div>
-
-                <div class="flex items-start">
-                  <div class="bg-sky-500/10 p-3 rounded-full mr-4">
-                    <Icon icon="ph:github-logo" class="w-5 h-5 text-sky-500" />
-                  </div>
-                  <div>
-                    <h4 class="font-medium text-gray-900 dark:text-white">{{ t.contact.github }}</h4>
-                    <a href="https://github.com/cseri502" target="_blank" rel="noopener noreferrer"
-                      class="text-gray-600 dark:text-gray-400 hover:text-sky-500 dark:hover:text-sky-500">
-                      github.com/cseri502
-                    </a>
-                  </div>
-                </div>
-
-                <div class="flex items-start">
-                  <div class="bg-sky-500/10 p-3 rounded-full mr-4">
-                    <Icon icon="ph:linkedin-logo" class="w-5 h-5 text-sky-500" />
-                  </div>
-                  <div>
-                    <h4 class="font-medium text-gray-900 dark:text-white">{{ t.contact.linkedin }}</h4>
-                    <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer"
-                      class="text-gray-600 dark:text-gray-400 hover:text-sky-500 dark:hover:text-sky-500">
-                      linkedin.com/in/yourprofile
-                    </a>
-                  </div>
-                </div>
-
-                <div class="flex items-start">
-                  <div class="bg-sky-500/10 p-3 rounded-full mr-4">
-                    <Icon icon="ph:facebook-logo" class="w-5 h-5 text-sky-500" />
-                  </div>
-                  <div>
-                    <h4 class="font-medium text-gray-900 dark:text-white">{{ t.contact.facebook }}</h4>
-                    <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer"
-                      class="text-gray-600 dark:text-gray-400 hover:text-sky-500 dark:hover:text-sky-500">
-                      facebook.com/davidcseresznyes05
+                      {{ item.value }}
                     </a>
                   </div>
                 </div>

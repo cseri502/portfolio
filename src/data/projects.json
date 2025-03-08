@@ -111,9 +111,7 @@
         "github": "https://github.com/cseri502/vue-portfolio",
         "demo": null,
         "features": {
-            "en": [
-                "TODO: list features"
-            ],
+            "en": ["TODO: list features"],
             "hu": [],
             "de": []
         }
@@ -166,6 +164,54 @@
                 "Echtzeit-Vorschau des Passworts",
                 "Benutzerfreundlicher Schieberegler zur Auswahl der Passwortlänge",
                 "Responsives Design für alle Bildschirmgrößen"
+            ]
+        }
+    },
+    {
+        "id": 5,
+        "title": "Pixelworld",
+        "description": {
+            "en": "A procedural 2D world generator where randomness meets creativity in a pixelated playground of infinite possibilities.",
+            "hu": "Egy procedurális 2D világ generátor, ahol a véletlenszerűség találkozik a kreativitással egy pixeles játszótéren, végtelen lehetőségekkel.",
+            "de": "Ein prozeduraler 2D-Weltgenerator, bei dem Zufall auf Kreativität in einem pixeligen Spielplatz unendlicher Möglichkeiten trifft."
+        },
+        "image": "/projects/pixelworld.png",
+        "tags": ["C#", "Raylib", ".NET"],
+        "github": "https://github.com/cseri502/pixelworld",
+        "demo": null,
+        "features": {
+            "en": [
+                "Create a procedural pixel world with unique landscapes",
+                "Move the camera by holding down the right click at the edges of the window",
+                "Break and modify terrain with the left mouse button",
+                "Experience a new world with each generation",
+                "Cross-platform compatibility",
+                "High-performance rendering through Raylib",
+                "Endless exploration possibilities",
+                "Creative playground with no strict rules",
+                "Beautiful pixel art textures from Faithful resource pack"
+            ],
+            "hu": [
+                "Procedurális pixel világ létrehozása egyedi tájképekkel",
+                "Kamera mozgatása jobb egérgombbal az ablak széleinél",
+                "Terep módosítása és rombolása bal egérgombbal",
+                "Minden generálásnál új világ élménye",
+                "Platformfüggetlen kompatibilitás",
+                "Nagy teljesítményű renderelés Raylib segítségével",
+                "Végtelen felfedezési lehetőségek",
+                "Kreatív játszótér szigorú szabályok nélkül",
+                "Gyönyörű pixel art textúrák a Faithful resource pack-ből"
+            ],
+            "de": [
+                "Erstellung einer prozeduralen Pixelwelt mit einzigartigen Landschaften",
+                "Bewegen der Kamera durch Halten der rechten Maustaste an den Fensterrändern",
+                "Terrain mit der linken Maustaste brechen und modifizieren",
+                "Erleben Sie bei jeder Generierung eine neue Welt",
+                "Plattformübergreifende Kompatibilität",
+                "Hochleistungs-Rendering durch Raylib",
+                "Endlose Erkundungsmöglichkeiten",
+                "Kreativer Spielplatz ohne strenge Regeln",
+                "Schöne Pixel-Art-Texturen aus dem Faithful Resource Pack"
             ]
         }
     }
