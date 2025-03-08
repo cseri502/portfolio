@@ -43,7 +43,21 @@
         "title": "Kiemelt Projektek",
         "description": "Íme néhány a legutóbbi projektjeim közül. Látogasd meg a projektek oldalt a teljes portfólióm megtekintéséhez.",
         "viewProject": "Projekt megtekintése",
-        "viewAll": "Összes projekt megtekintése"
+        "viewAll": "Összes projekt megtekintése",
+        "page": {
+            "title": "Projektek",
+            "subtitle": "Itt van néhány projekt, amin dolgoztam. Szűrheted őket technológia szerint, vagy kattinthatsz egy projektre további részletekért.",
+            "noProjects": "Nem található projekt",
+            "noItemsFound": "Egyetlen projekt sem felel meg a kiválasztott szűrőnek. Próbálj meg másik technológiát választani.",
+            "all": "Összes"
+        },
+        "card": "Részletek megtekintése",
+        "details": {
+            "backToProjects": "Vissza a projektekhez",
+            "projectOverview": "Projektáttekintés",
+            "features": "Funkciók",
+            "demo": "Bemutató"
+        }
     },
     "contact": {
         "title": "Kapcsolat",

@@ -34,7 +34,13 @@
     },
     "skills": {
         "title": "Fertigkeiten",
-        "categories": ["Alle", "Frontend", "Backend", "Datenbanken", "Sonstige"],
+        "categories": [
+            "Alle",
+            "Frontend",
+            "Backend",
+            "Datenbanken",
+            "Sonstige"
+        ],
         "certifications": "Zertifikate",
         "certInfo": "Klicken Sie auf den Namen des Zertifikats, um es zu öffnen.",
         "certCategories": ["Alle", "Netzwerke", "Entwicklung", "IT"]
@@ -43,7 +49,21 @@
         "title": "Ausgewählte Projekte",
         "description": "Hier sind einige meiner neuesten Projekte. Besuchen Sie die Projektseite, um mein vollständiges Portfolio zu sehen.",
         "viewProject": "Projekt ansehen",
-        "viewAll": "Alle Projekte ansehen"
+        "viewAll": "Alle Projekte ansehen",
+        "page": {
+            "title": "Projekte",
+            "subtitle": "Hier sind einige der Projekte, an denen ich gearbeitet habe. Sie können sie nach Technologie filtern oder auf ein Projekt klicken, um mehr Details zu sehen.",
+            "noProjects": "Keine Projekte gefunden",
+            "noItemsFound": "Keine Projekte entsprechen dem ausgewählten Filter. Versuchen Sie, eine andere Technologie auszuwählen.",
+            "all": "Alle"
+        },
+        "card": "Details anzeigen",
+        "details": {
+            "backToProjects": "Zurück zu den Projekten",
+            "projectOverview": "Projektübersicht",
+            "features": "Funktionen",
+            "demo": "Live-Demo"
+        }
     },
     "contact": {
         "title": "Kontakt aufnehmen",

@@ -32,7 +32,7 @@ onMounted(() => {
       <div class="mb-8">
         <router-link to="/projects" class="inline-flex items-center text-sky-500 hover:underline">
           <Icon icon="ph:arrow-left" class="mr-1 w-4 h-4" />
-          Back to Projects
+          {{ translations[currentLanguage as keyof typeof translations].projects.details.backToProjects }}
         </router-link>
       </div>
 
@@ -55,7 +55,7 @@ onMounted(() => {
             <a v-if="project.demo" :href="project.demo" target="_blank" rel="noopener noreferrer"
               class="inline-flex items-center text-gray-700 dark:text-gray-300 hover:text-sky-500 dark:hover:text-sky-500">
               <Icon icon="ph:globe" class="mr-1 w-5 h-5" />
-              Live Demo
+              {{ translations[currentLanguage as keyof typeof translations].projects.details.demo }}
             </a>
           </div>
         </div>
@@ -72,12 +72,16 @@ onMounted(() => {
         <!-- Project content -->
         <div class="p-6">
           <div class="mb-8">
-            <h2 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Project Overview</h2>
+            <h2 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
+              {{ translations[currentLanguage as keyof typeof translations].projects.details.projectOverview }}
+            </h2>
             <p class="text-gray-700 dark:text-gray-300">{{ project.description[currentLanguage as keyof typeof translations] }}</p>
           </div>
 
           <div class="mb-8">
-            <h2 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">Features</h2>
+            <h2 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
+              {{ translations[currentLanguage as keyof typeof translations].projects.details.features }}
+            </h2>
             <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300">
               <li v-for="(feature, index) in project.features[currentLanguage as keyof typeof translations]" :key="index" class="mb-2">
                 {{ feature }}

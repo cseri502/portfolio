@@ -187,7 +187,7 @@ const displayedCertifications = computed(() => {
         </p>
 
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div v-for="project in projectsData.slice(0, 2)" :key="project.id"
+          <div v-for="project in projectsData.filter(p => p.title === 'Matrixia' || p.title === 'Image Editor')" :key="project.id"
             class="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
             <div class="h-48 bg-gradient-to-r from-sky-500 to-indigo-500 flex items-center justify-center">
               <Icon icon="ph:code" class="w-16 h-16 text-white" />

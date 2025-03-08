@@ -43,7 +43,21 @@
         "title": "Featured Projects",
         "description": "Here are some of my recent projects. Visit the projects page to see my complete portfolio.",
         "viewProject": "View Project",
-        "viewAll": "View All Projects"
+        "viewAll": "View All Projects",
+        "page": {
+            "title": "Projects",
+            "subtitle": "Here are some of the projects I've worked on. You can filter them by technology or click on a project to see more details.",
+            "noProjects": "No projects found",
+            "noItemsFound": "No projects match the selected filter. Try selecting a different technology.",
+            "all": "All"
+        },
+        "card": "View Details",
+        "details": {
+            "backToProjects": "Back to Projects",
+            "projectOverview": "Project Overview",
+            "features": "Features",
+            "demo": "Live Demo"
+        }
     },
     "contact": {
         "title": "Get In Touch",

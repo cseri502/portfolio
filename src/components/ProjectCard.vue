@@ -1,5 +1,13 @@
 <script setup lang="ts">
 import { Icon } from '@iconify/vue';
+import en from '../locales/en.json'
+import de from '../locales/de.json'
+import hu from '../locales/hu.json'
+import { inject, ref } from 'vue';
+
+const translations = { en, de, hu };
+
+const currentLanguage = inject('language', ref('en'));
 
 interface IProject {
   id: number;
@@ -42,7 +50,7 @@ defineProps<{
     <!-- View details and links section -->
     <div class="p-4 pt-0 mt-auto flex justify-between">
       <router-link :to="`/projects/${project.id}`" class="text-sky-500 hover:underline inline-flex items-center">
-        View Details
+        {{ translations[currentLanguage as keyof typeof translations].projects.card }}
         <Icon icon="ph:arrow-right" class="ml-1 w-4 h-4" />
       </router-link>
 
