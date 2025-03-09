@@ -100,6 +100,39 @@
     },
     {
         "id": 3,
+        "title": "Vault of Algorithms",
+        "description": {
+            "en": "A React application to showcase algorithm implementations in multiple programming languages.",
+            "hu": "Egy React alkalmazás algoritmus implementációk bemutatására több programozási nyelven.",
+            "de": "Eine React-Anwendung zur Präsentation von Algorithmus-Implementierungen in mehreren Programmiersprachen."
+        },
+        "image": "/projects/voa.png",
+        "tags": ["React", "TypeScript", "TailwindCSS"],
+        "github": "https://github.com/cseri502/vault-of-algorithms",
+        "demo": null,
+        "features": {
+            "en": [
+                "Algorithms in many languages: selected algorithm implementations in many programming languages",
+                "Smart search: easy search for algorithms by name, type or programming language",
+                "Light/dark theme: customizable interface for comfortable browsing",
+                "Responsive design: works perfectly on all devices"
+            ],
+            "hu": [
+                "Algoritmusok sok nyelven: válogatott algoritmus implementációk sok programozási nyelven",
+                "Intelligens keresés: algoritmusok egyszerű keresése név, típus vagy programozási nyelv alapján",
+                "Világos/sötét téma: személyre szabható felület a kényelmes böngészéshez",
+                "Responsive design: minden eszközön tökéletesen működik"
+            ],
+            "de": [
+                "Algorithmen in vielen Sprachen: ausgewählte Algorithmus-Implementierungen in vielen Programmiersprachen",
+                "Intelligente Suche: Einfache Suche nach Algorithmen nach Name, Typ oder Programmiersprache",
+                "Helles/Dunkles Thema: personalisierbare Oberfläche für bequemes Browsen",
+                "Responsive Design: funktioniert perfekt auf jedem Gerät"
+            ]
+        }
+    },
+    {
+        "id": 3,
         "title": "Portfolio website",
         "description": {
             "en": "A modern and clean website that showcases my projects, skills and professional experience.",
