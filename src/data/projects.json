@@ -132,7 +132,7 @@
         }
     },
     {
-        "id": 3,
+        "id": 4,
         "title": "Portfolio website",
         "description": {
             "en": "A modern and clean website that showcases my projects, skills and professional experience.",
@@ -150,7 +150,7 @@
         }
     },
     {
-        "id": 4,
+        "id": 5,
         "title": "Password Generator",
         "description": {
             "en": "A web application that allows users to generate secure passwords based on customizable settings.",
@@ -201,7 +201,7 @@
         }
     },
     {
-        "id": 5,
+        "id": 6,
         "title": "Pixelworld",
         "description": {
             "en": "A procedural 2D world generator where randomness meets creativity in a pixelated playground of infinite possibilities.",
