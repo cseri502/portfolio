@@ -8,7 +8,7 @@
             "de": "Eine Webanwendung, mit der sich Matrixoperationen problemlos durchführen lassen."
         },
         "image": "/projects/matrixia.png",
-        "tags": ["Vue", "TypeScript", "TailwindCSS", "C#", ".NET"],
+        "tags": ["Vue", "TypeScript", "TailwindCSS", "C#", ".NET", "Axios"],
         "github": "https://github.com/cseri502/Matrixia",
         "demo": null,
         "features": {
@@ -202,6 +202,57 @@
     },
     {
         "id": 6,
+        "title": "Type Master",
+        "description": {
+            "en": "A sleek and minimalist typing test application designed to help users improve their typing speed and accuracy.",
+            "hu": "Egy elegáns és minimalista gépelési tesztalkalmazás, amely segít a felhasználóknak javítani a gépelési sebességet és pontosságot.",
+            "de": "Eine elegante und minimalistische Schreibtest-Anwendung, die Benutzern hilft, ihre Tippgeschwindigkeit und -genauigkeit zu verbessern."
+        },
+        "image": "/projects/type-master.png",
+        "tags": ["Vue", "TypeScript", "TailwindCSS", "Axios"],
+        "github": "https://github.com/cseri502/type-master",
+        "demo": null,
+        "features": {
+            "en": [
+                "Multiple difficulty levels (easy, medium, and hard)",
+                "Real-time typing speed (WPM) and accuracy percentage metrics",
+                "Quote-based challenges fetched from an external API",
+                "Sleek dark mode UI with monospace font",
+                "Responsive design for all screen sizes",
+                "Automatic test completion when you reach the end of the quote",
+                "One-click reset with the \"New Quote\" button",
+                "Detailed performance statistics after each test",
+                "Customizable difficulty settings",
+                "Modern, eye-friendly interface"
+            ],
+            "hu": [
+                "Több nehézségi szint (könnyű, közepes és nehéz)",
+                "Valós idejű gépelési sebesség (WPM) és pontossági százalék mérőszámok",
+                "Idézeteken alapuló kihívások külső API-ról",
+                "Elegáns sötét mód UI monospace betűtípussal",
+                "Reszponzív kialakítás minden eszközre",
+                "Automatikus teszt befejezés az idézet végén",
+                "Egyetlen kattintással új teszt indítása az \"Új idézet\" gombbal",
+                "Részletes teljesítmény statisztikák minden teszt után",
+                "Testreszabható nehézségi beállítások",
+                "Modern, szembarát felület"
+            ],
+            "de": [
+                "Mehrere Schwierigkeitsgrade (leicht, mittel und schwer)",
+                "Echtzeit-Tippgeschwindigkeit (WPM) und Genauigkeitsprozent-Metriken",
+                "Zitat-basierte Herausforderungen von einer externen API",
+                "Elegante Dunkelmodus-Benutzeroberfläche mit Monospace-Schrift",
+                "Responsives Design für alle Bildschirmgrößen",
+                "Automatischer Testabschluss am Ende des Zitats",
+                "Ein-Klick-Reset mit der Schaltfläche \"Neues Zitat\"",
+                "Detaillierte Leistungsstatistiken nach jedem Test",
+                "Anpassbare Schwierigkeitseinstellungen",
+                "Moderne, augenfreundliche Benutzeroberfläche"
+            ]
+        }
+    },
+    {
+        "id": 7,
         "title": "Pixelworld",
         "description": {
             "en": "A procedural 2D world generator where randomness meets creativity in a pixelated playground of infinite possibilities.",
