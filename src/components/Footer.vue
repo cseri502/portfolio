@@ -4,6 +4,7 @@ import { computed, inject, ref } from 'vue'
 import en from '../locales/en.json';
 import de from '../locales/de.json';
 import hu from '../locales/hu.json';
+import contacts from '../data/contacts.json';
 
 const translations = {
   en,
@@ -26,21 +27,10 @@ const t = computed(() => {
           <p class="text-gray-600 dark:text-gray-400">{{ t.footer.text }}</p>
         </div>
         <div class="flex space-x-4">
-          <a href="https://github.com/cseri502" target="_blank" rel="noopener noreferrer"
+          <a v-for="(contact, index) in contacts" :key="index" :href="contact.link"
+            :target="contact.external ? '_blank' : ''" :rel="contact.external ? 'noopener noreferrer' : ''"
             class="text-gray-600 dark:text-gray-400 hover:text-sky-500 dark:hover:text-sky-500">
-            <Icon icon="mdi:github" class="w-6 h-6" />
-          </a>
-          <a href="https://linkedin.com/" target="_blank" rel="noopener noreferrer"
-            class="text-gray-600 dark:text-gray-400 hover:text-sky-500 dark:hover:text-sky-500">
-            <Icon icon="mdi:linkedin" class="w-6 h-6" />
-          </a>
-          <a href="mailto:your-email@example.com"
-            class="text-gray-600 dark:text-gray-400 hover:text-sky-500 dark:hover:text-sky-500">
-            <Icon icon="mdi:email" class="w-6 h-6" />
-          </a>
-          <a href="https://facebook.com/" target="_blank" rel="noopener noreferrer"
-            class="text-gray-600 dark:text-gray-400 hover:text-sky-500 dark:hover:text-sky-500">
-            <Icon icon="mdi:facebook" class="w-6 h-6" />
+            <Icon :icon="contact.icon" class="w-6 h-6" />
           </a>
         </div>
       </div>

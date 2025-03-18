@@ -211,7 +211,7 @@
         "image": "/projects/type-master.png",
         "tags": ["Vue", "TypeScript", "TailwindCSS", "Axios"],
         "github": "https://github.com/cseri502/type-master",
-        "demo": null,
+        "demo": "https://cseri502.github.io/type-master/",
         "features": {
             "en": [
                 "Multiple difficulty levels (easy, medium, and hard)",

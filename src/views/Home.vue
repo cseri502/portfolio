@@ -53,37 +53,6 @@ const displayedCertifications = computed(() => {
     .filter(cert => cert.category === activeCertCategory.value)
     .sort((a, b) => b.date - a.date);
 });
-
-const contactItems = computed(() => [
-  {
-    icon: 'ph:envelope',
-    title: "Email",
-    value: contactData.email,
-    link: `mailto:${contactData.email}`,
-    external: false
-  },
-  {
-    icon: 'ph:github-logo',
-    title: "Github",
-    value: contactData.github,
-    link: contactData.github,
-    external: true
-  },
-  {
-    icon: 'ph:linkedin-logo',
-    title: "LinkedIn",
-    value: contactData.linkedIn,
-    link: contactData.linkedIn,
-    external: true
-  },
-  {
-    icon: 'ph:facebook-logo',
-    title: "Facebook",
-    value: contactData.facebook,
-    link: contactData.facebook,
-    external: true
-  }
-]);
 </script>
 
 <template>
@@ -263,7 +232,7 @@ const contactItems = computed(() => [
               <h3 class="text-xl font-semibold mb-6 text-gray-900 dark:text-white">{{ t.contact.info }}</h3>
 
               <div class="space-y-6">
-                <div v-for="(item, index) in contactItems" :key="index" class="flex items-start">
+                <div v-for="(item, index) in contactData" :key="index" class="flex items-start">
                   <div class="bg-sky-500/10 p-3 rounded-full mr-4">
                     <Icon :icon="item.icon" class="w-5 h-5 text-sky-500" />
                   </div>
