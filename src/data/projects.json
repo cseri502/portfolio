@@ -253,6 +253,45 @@
     },
     {
         "id": 7,
+        "title": "GoMovies",
+        "description": {
+            "en": "A full-stack movie management application that allows users to create, view, edit, and manage a personal movie collection.",
+            "hu": "Egy teljes körű filmkezelő alkalmazás, amellyel saját filmgyűjteményedet rendszerezheted, szerkesztheted és böngészheted.",
+            "de": "Eine umfassende Anwendung zur Verwaltung von Filmen, mit der Nutzer ihre persönliche Filmsammlung organisieren, bearbeiten und durchsuchen können."
+        },
+        "image": "/projects/gomovies.png",
+        "tags": ["Go", "SQLite", "React", "TailwindCSS", "TypeScript", "Axios"],
+        "github": "https://github.com/cseri502/GoMovies",
+        "demo": null,
+        "features": {
+            "en": [
+                "Create, update, and delete movies",
+                "Upload movie poster images",
+                "Search and filter movies",
+                "Sort movies by title, year, or rating",
+                "Responsive design for mobile and desktop",
+                "Interactive user interface with smooth interactions"
+            ],
+            "hu": [
+                "Filmek hozzáadása, módosítása és törlése",
+                "Filmborítók feltöltése",
+                "Keresési és szűrési lehetőségek",
+                "Rendezés cím, év vagy értékelés alapján",
+                "Mobil- és asztali nézetre optimalizált kialakítás",
+                "Felhasználóbarát, gördülékeny kezelőfelület"
+            ],
+            "de": [
+                "Filme hinzufügen, bearbeiten und entfernen",
+                "Hochladen von Filmcovern",
+                "Such- und Filterfunktionen",
+                "Sortieren nach Titel, Jahr oder Bewertung",
+                "Optimierte Darstellung für Mobilgeräte und Desktop",
+                "Intuitive Benutzeroberfläche mit flüssiger Bedienung"
+            ]
+        }
+    },    
+    {
+        "id": 8,
         "title": "Pixelworld",
         "description": {
             "en": "A procedural 2D world generator where randomness meets creativity in a pixelated playground of infinite possibilities.",
