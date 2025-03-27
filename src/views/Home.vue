@@ -1,6 +1,7 @@
 <script setup lang="ts">
-import { ref, inject, computed } from 'vue'
+import { ref, inject, computed, onMounted, watch } from 'vue'
 import { Icon } from '@iconify/vue'
+import Typewriter from 'typewriter-effect/dist/core'
 import SkillCard from '../components/SkillCard.vue'
 import EducationItem from '../components/EducationItem.vue'
 import ContactForm from '../components/ContactForm.vue'
@@ -23,6 +24,30 @@ const currentLanguage = inject('language', ref('en'));
 
 const activeSkillCategory = ref(skillCategories.All);
 const activeCertCategory = ref(certCategories.All);
+const typewriterInstance = ref<Typewriter | null>(null);
+
+const updateTypewriter = () => {
+  if (typewriterInstance.value) {
+    typewriterInstance.value.stop();
+  }
+
+  const app = document.getElementById('role-span') as HTMLSpanElement
+  
+  typewriterInstance.value = new Typewriter(app, {
+    strings: t.value.hero.role,
+    autoStart: true,
+    loop: true,
+    delay: 75,
+  });
+}
+
+watch(currentLanguage, () => {
+  updateTypewriter();
+});
+
+onMounted(() => {
+  updateTypewriter();
+});
 
 const t = computed(() => {
   return translations[currentLanguage.value as keyof typeof translations]
@@ -41,6 +66,7 @@ const displayedSkills = computed(() => {
   if (activeSkillCategory.value === skillCategories.All) {
     return skills;
   }
+
   return skills.filter(skill => skill.category === activeSkillCategory.value);
 });
 
@@ -66,7 +92,7 @@ const displayedCertifications = computed(() => {
               {{ t.hero.greeting }} <span class="text-sky-500">{{ t.hero.name }}</span>
             </h1>
             <p class="text-xl text-gray-700 dark:text-gray-300 mb-8">
-              {{ t.hero.role }}
+              <span id="role-span"></span>
             </p>
             <div class="flex flex-wrap gap-3">
               <a href="#about" class="btn btn-primary">{{ t.hero.learnMore }}</a>
@@ -188,8 +214,9 @@ const displayedCertifications = computed(() => {
           {{ t.projects.description }}
         </p>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-          <div v-for="project in projectsData.filter(p => p.title === 'Matrixia' || p.title === 'Vault of Algorithms')"
+        <div class="grid grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] columns-auto gap-8">
+          <div
+            v-for="project in projectsData.filter(p => ['Matrixia', 'Vault of Algorithms', 'GoMovies'].includes(p.title))"
             :key="project.id"
             class="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
             <div class="h-48 bg-gradient-to-r from-sky-500 to-indigo-500 flex items-center justify-center">

@@ -3,7 +3,7 @@
     "hero": {
         "greeting": "Hallo, ich bin",
         "name": "David",
-        "role": "Software-Entwickler & Systemadministrator",
+        "role": ["Softwareentwickler", "Systemadministrator"],
         "learnMore": "Mehr erfahren",
         "contactMe": "Kontaktiere mich"
     },

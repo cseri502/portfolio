@@ -3,7 +3,7 @@
     "hero": {
         "greeting": "Szia, a nevem",
         "name": "Dávid",
-        "role": "Szoftverfejlesztő & Rendszergazda",
+        "role": ["Szoftverfejlesztő", "Rendszerüzemeltető"],
         "learnMore": "Tudj meg többet",
         "contactMe": "Kapcsolat"
     },
