@@ -91,8 +91,8 @@ const displayedCertifications = computed(() => {
             <h1 class="text-4xl md:text-5xl font-bold mb-4 text-gray-900 dark:text-white">
               {{ t.hero.greeting }} <span class="text-sky-500">{{ t.hero.name }}</span>
             </h1>
-            <p class="text-xl text-gray-700 dark:text-gray-300 mb-8">
-              <span id="role-span"></span>
+            <p class="text-xl font-mono text-gray-700 dark:text-gray-300 mb-8">
+              &#47;&#47; <span id="role-span"></span>
             </p>
             <div class="flex flex-wrap gap-3">
               <a href="#about" class="btn btn-primary">{{ t.hero.learnMore }}</a>

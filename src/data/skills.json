@@ -24,7 +24,6 @@
         { "name": "Go", "icon": "devicon:go-wordmark", "category": 2 },
         { "name": "Python", "icon": "vscode-icons:file-type-python", "category": 2 },
         { "name": "ASP.NET", "icon": "logos:dotnet", "category": 2 },
-        { "name": "Node.JS", "icon": "logos:nodejs-icon", "category": 2 },
 
         { "name": "MongoDB", "icon": "vscode-icons:file-type-mongo", "category": 3 },
         { "name": "MySQL", "icon": "logos:mysql", "category": 3 },
