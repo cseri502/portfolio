@@ -61,7 +61,7 @@ onMounted(() => {
         </div>
 
         <!-- Project image -->
-        <div v-if="project.image" class="w-full h-80 bg-gray-200/50 dark:bg-gray-700/50 backdrop-blur-sm">
+        <div v-if="project.image" class="w-full h-full bg-gray-200/50 dark:bg-gray-700/50 backdrop-blur-sm">
           <img :src="project.image" :alt="project.title" class="w-full h-full object-cover" />
         </div>
         <div v-else
