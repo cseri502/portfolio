@@ -1,4 +1,4 @@
-import { createApp } from 'vue';
+import { createApp, ref } from 'vue';
 import { createRouter, createWebHistory } from 'vue-router';
 import './style.css';
 import App from './App.vue';
@@ -26,4 +26,9 @@ const router = createRouter({
     },
 });
 
-createApp(App).use(router).mount('#app');
+const currentLanguage = ref('en');
+
+const app = createApp(App);
+app.provide('language', currentLanguage);
+app.use(router);
+app.mount('#app');

@@ -1,22 +1,9 @@
 <script setup lang="ts">
 import { Icon } from '@iconify/vue'
-import { computed, inject, ref } from 'vue'
-import en from '../locales/en.json';
-import de from '../locales/de.json';
-import hu from '../locales/hu.json';
 import contacts from '../data/contacts.json';
+import { useLocales } from '../composables/useLocales'
 
-const translations = {
-  en,
-  de,
-  hu,
-};
-
-const currentLanguage = inject('language', ref('en'))
-
-const t = computed(() => {
-  return translations[currentLanguage.value as keyof typeof translations]
-})
+const { t } = useLocales();
 </script>
 
 <template>

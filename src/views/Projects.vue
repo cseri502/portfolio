@@ -1,16 +1,12 @@
 <script setup lang="ts">
-import { ref, computed, inject } from 'vue'
+import { ref, computed } from 'vue'
 import { Icon } from '@iconify/vue'
+import { useLocales } from '../composables/useLocales'
 import ProjectCard from '../components/ProjectCard.vue'
 import Title from '../components/Title.vue'
 import projects from '../data/projects.json';
-import en from '../locales/en.json'
-import de from '../locales/de.json'
-import hu from '../locales/hu.json'
 
-const translations = { en, de, hu };
-
-const currentLanguage = inject('language', ref('en'));
+const { t, currentLanguage } = useLocales();
 const filterTag = ref('')
 
 const filteredProjects = computed(() => {
@@ -35,9 +31,9 @@ const allTags = computed(() => {
   <div
     class="bg-gradient-to-b from-gray-50 to-white dark:from-gray-950 dark:to-gray-900 backdrop-blur-sm min-h-screen py-16 relative">
     <div class="section-container">
-      <Title :title="translations[currentLanguage as keyof typeof translations].projects.page.title" />
+      <Title :title="t.projects.page.title" />
       <p class="text-center text-gray-700 dark:text-gray-300 mb-10 max-w-2xl mx-auto">
-        {{ translations[currentLanguage as keyof typeof translations].projects.page.subtitle }}
+        {{ t.projects.page.subtitle }}
       </p>
 
       <!-- Filter by tag -->
@@ -45,7 +41,7 @@ const allTags = computed(() => {
         <div class="flex flex-wrap gap-2">
           <button @click="filterTag = ''" class="px-3 py-1 text-sm transition-colors duration-200 rounded-sm cursor-pointer"
             :class="filterTag === '' ? 'bg-sky-500 text-white' : 'bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm text-gray-700 dark:text-gray-300 border border-gray-200/30 dark:border-gray-700/30'">
-            {{ translations[currentLanguage as keyof typeof translations].projects.page.all }}
+            {{ t.projects.page.all }}
           </button>
           <button v-for="tag in allTags" :key="tag" @click="filterTag = tag"
             class="px-3 py-1 text-sm transition-colors duration-200 rounded-sm cursor-pointer"
@@ -60,7 +56,7 @@ const allTags = computed(() => {
         <ProjectCard v-for="project in filteredProjects" :key="project.id" :project="{
           id: project.id,
           title: project.title,
-          description: project.description[currentLanguage as keyof typeof translations],
+          description: project.description[currentLanguage],
           demo: project.demo,
           github: project.github,
           image: project.image,
@@ -71,9 +67,9 @@ const allTags = computed(() => {
       <!-- Empty state -->
       <div v-if="filteredProjects.length === 0" class="text-center py-12">
         <Icon icon="ph:folder-open" class="w-16 h-16 mx-auto text-gray-400 dark:text-gray-600" />
-        <h3 class="mt-4 text-lg font-medium text-gray-900 dark:text-white">{{ translations[currentLanguage as keyof typeof translations].projects.page.noProjects }}</h3>
+        <h3 class="mt-4 text-lg font-medium text-gray-900 dark:text-white">{{ t.projects.page.noProjects }}</h3>
         <p class="mt-2 text-gray-600 dark:text-gray-400">
-          {{ translations[currentLanguage as keyof typeof translations].projects.page.noItemsFound }}
+          {{ t.projects.page.noItemsFound }}
         </p>
       </div>
     </div>

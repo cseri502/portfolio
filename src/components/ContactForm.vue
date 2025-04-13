@@ -1,21 +1,9 @@
 <script setup lang="ts">
-import { ref, inject, computed, onMounted } from 'vue'
+import { ref, onMounted } from 'vue'
 import emailjs from '@emailjs/browser'
-import en from '../locales/en.json';
-import de from '../locales/de.json';
-import hu from '../locales/hu.json';
+import { useLocales } from '../composables/useLocales'
 
-const translations = {
-  en,
-  de,
-  hu,
-};
-
-const currentLanguage = inject('language', ref('en'))
-
-const t = computed(() => {
-  return translations[currentLanguage.value as keyof typeof translations]
-})
+const { t } = useLocales();
 
 const name = ref('')
 const email = ref('')

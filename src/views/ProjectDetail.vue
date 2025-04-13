@@ -1,16 +1,11 @@
 <script setup lang="ts">
-import { ref, onMounted, computed, inject } from 'vue'
+import { onMounted, computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { Icon } from '@iconify/vue'
+import { useLocales } from '../composables/useLocales'
 import projects from '../data/projects.json';
-import en from '../locales/en.json'
-import de from '../locales/de.json'
-import hu from '../locales/hu.json'
 
-const translations = { en, de, hu };
-
-const currentLanguage = inject('language', ref('en'));
-
+const { t, currentLanguage } = useLocales();
 const route = useRoute()
 const router = useRouter()
 
@@ -32,7 +27,7 @@ onMounted(() => {
       <div class="mb-8">
         <router-link to="/projects" class="inline-flex items-center text-sky-500 hover:underline">
           <Icon icon="ph:arrow-left" class="mr-1 w-4 h-4" />
-          {{ translations[currentLanguage as keyof typeof translations].projects.details.backToProjects }}
+          {{ t.projects.details.backToProjects }}
         </router-link>
       </div>
 
@@ -55,7 +50,7 @@ onMounted(() => {
             <a v-if="project.demo" :href="project.demo" target="_blank" rel="noopener noreferrer"
               class="inline-flex items-center text-gray-700 dark:text-gray-300 hover:text-sky-500 dark:hover:text-sky-500">
               <Icon icon="ph:globe" class="mr-1 w-5 h-5" />
-              {{ translations[currentLanguage as keyof typeof translations].projects.details.demo }}
+              {{ t.projects.details.demo }}
             </a>
           </div>
         </div>
@@ -73,17 +68,17 @@ onMounted(() => {
         <div class="p-6">
           <div class="mb-8">
             <h2 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
-              {{ translations[currentLanguage as keyof typeof translations].projects.details.projectOverview }}
+              {{ t.projects.details.projectOverview }}
             </h2>
-            <p class="text-gray-700 dark:text-gray-300">{{ project.description[currentLanguage as keyof typeof translations] }}</p>
+            <p class="text-gray-700 dark:text-gray-300">{{ project.description[currentLanguage] }}</p>
           </div>
 
           <div class="mb-8">
             <h2 class="text-xl font-semibold mb-4 text-gray-900 dark:text-white">
-              {{ translations[currentLanguage as keyof typeof translations].projects.details.features }}
+              {{ t.projects.details.features }}
             </h2>
             <ul class="list-disc pl-5 text-gray-700 dark:text-gray-300">
-              <li v-for="(feature, index) in project.features[currentLanguage as keyof typeof translations]" :key="index" class="mb-2">
+              <li v-for="(feature, index) in project.features[currentLanguage]" :key="index" class="mb-2">
                 {{ feature }}
               </li>
             </ul>

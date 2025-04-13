@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, inject, computed, onMounted, watch } from 'vue'
+import { ref, computed, onMounted, watch } from 'vue'
 import { Icon } from '@iconify/vue'
 // @ts-ignore
 import Typewriter from 'typewriter-effect/dist/core'
@@ -11,17 +11,14 @@ import skillsData from '../data/skills.json'
 import certificationsData from '../data/certifications.json'
 import projectsData from '../data/projects.json';
 import contactData from '../data/contacts.json';
-import en from '../locales/en.json'
-import de from '../locales/de.json'
-import hu from '../locales/hu.json'
+import { useLocales } from '../composables/useLocales'
 
-const translations = { en, de, hu };
+const { t, currentLanguage } = useLocales();
+
 const skills = skillsData.items;
 const skillCategories = skillsData.categories;
 const certifications = certificationsData.items;
 const certCategories = certificationsData.categories;
-
-const currentLanguage = inject('language', ref('en'));
 
 const activeSkillCategory = ref(skillCategories.All);
 const activeCertCategory = ref(certCategories.All);
@@ -49,10 +46,6 @@ watch(currentLanguage, () => {
 onMounted(() => {
   updateTypewriter();
 });
-
-const t = computed(() => {
-  return translations[currentLanguage.value as keyof typeof translations]
-})
 
 const sortedEducation = computed(() => {
   return t.value.education.items.sort((a, b) => {
@@ -225,8 +218,7 @@ const displayedCertifications = computed(() => {
             </div>
             <div class="p-6">
               <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">{{ project.title }}</h3>
-              <p class="text-gray-600 dark:text-gray-400 mb-4">{{ project.description[currentLanguage as keyof typeof
-                translations] }}</p>
+              <p class="text-gray-600 dark:text-gray-400 mb-4">{{ project.description[currentLanguage] }}</p>
               <div class="flex flex-wrap gap-2 mb-4">
                 <span v-for="tech in project.tags" :key="tech"
                   class="text-xs px-2 py-1 bg-sky-500/10 text-sky-500 rounded-md">
