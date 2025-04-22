@@ -337,5 +337,38 @@
                 "Schöne Pixel-Art-Texturen aus dem Faithful Resource Pack"
             ]
         }
+    },
+    {
+        "id": 9,
+        "title": "Bouncy Balls",
+        "description": {
+            "en": "A visual simulation developed with C# and Raylib that displays bouncing circles within a larger circle outline. The program demonstrates principles of collision detection, angle and vector handling, and implementation of basic game physics in a 2D environment.",
+            "hu": "Egy vizuális szimuláció, amely C# és Raylib használatával készült, és pattogó köröket jelenít meg egy nagyobb körvázon belül. A program bemutatja az ütközés- és vektorkezelés alapelveit, valamint a 2D-s környezetben történő alapvető játékmechanika megvalósítását.",
+            "de": "Eine visuelle Simulation, die mit C# und Raylib entwickelt wurde und springende Kreise innerhalb einer größeren Kreisumriss anzeigt. Das Programm demonstriert die Prinzipien der Kollisionsdetektion, Winkel- und Vektorkontrolle sowie die Implementierung grundlegender Spielphysik in einer 2D-Umgebung."
+        },
+        "image": "/projects/bouncy-balls.png",
+        "tags": ["C#", "Raylib", ".NET"],
+        "github": "https://github.com/cseri502/bouncy-balls",
+        "demo": null,
+        "features": {
+            "en": [
+                "Visual simulation of bouncing circles within a larger circle outline",
+                "Demonstrates principles of collision detection, angle and vector handling",
+                "Implementation of basic game physics in a 2D environment",
+                "Developed with C# and Raylib"
+            ],
+            "hu": [
+                "Pattogó körök vizuális szimulációja egy nagyobb körvázon belül",
+                "Ütközés- és vektorkezelés alapelveinek bemutatása",
+                "Alapvető játékmechanika megvalósítása 2D környezetben",
+                "C# és Raylib használatával fejlesztve"
+            ],
+            "de": [
+                "Visuelle Simulation von springenden Kreisen innerhalb einer größeren Kreisumriss",
+                "Demonstration der Prinzipien der Kollisionsdetektion, Winkel- und Vektorkontrolle",
+                "Implementierung grundlegender Spielphysik in einer 2D-Umgebung",
+                "Entwickelt mit C# und Raylib"
+            ]
+        }
     }
 ]
