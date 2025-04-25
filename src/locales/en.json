@@ -17,8 +17,15 @@
         "items": [
             {
                 "institution": "DSZC Mechwart",
-                "degree": "IT System Administrator (54 481 06)",
+                "degree": "High School Diploma",
                 "startYear": 2019,
+                "endYear": 2023,
+                "description": "Vocational high school training where I obtained a high school diploma. During the training, I learned about the operation of computers and networks, as well as the basics of system administration."
+            },
+            {
+                "institution": "DSZC Mechwart",
+                "degree": "IT System Administrator (54 481 06)",
+                "startYear": 2023,
                 "endYear": 2024,
                 "description": "Specialized in Windows/Linux server configuration, Cisco networking and system administration."
             },

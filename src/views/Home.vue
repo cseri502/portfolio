@@ -184,7 +184,7 @@ const displayedCertifications = computed(() => {
                 class="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm border border-gray-100 dark:border-gray-700 flex items-start hover:shadow-md transition-shadow duration-200">
                 <Icon icon="ph:certificate" class="w-6 h-6 text-sky-500 mr-3 mt-1 flex-shrink-0" />
                 <div>
-                  <a :href="`/certificates/${cert.file}`" target="_blank" rel="noopener noreferrer">
+                  <a :href="`/portfolio/certificates/${cert.file}`" target="_blank" rel="noopener noreferrer">
                     <h4
                       class="font-medium text-gray-900 dark:text-white duration-200 transition-colors hover:text-sky-200 hover:underline cursor-pointer">
                       {{ cert.name }}</h4>

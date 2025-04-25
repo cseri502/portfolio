@@ -17,8 +17,15 @@
         "items": [
             {
                 "institution": "DSZC Mechwart",
-                "degree": "IT-Systemadministrator (54 481 06)",
+                "degree": "Abitur",
                 "startYear": 2019,
+                "endYear": 2023,
+                "description": "Berufliches Gymnasium, in dem ich das Abitur erworben habe. Während der Ausbildung habe ich die Funktionsweise von Computern und Netzwerken sowie die Grundlagen der Systemadministration kennengelernt."
+            },
+            {
+                "institution": "DSZC Mechwart",
+                "degree": "IT-Systemadministrator (54 481 06)",
+                "startYear": 2023,
                 "endYear": 2024,
                 "description": "Spezialisiert auf Windows/Linux-Serverkonfiguration, Cisco-Netzwerke und Systemadministration."
             },

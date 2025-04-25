@@ -17,8 +17,15 @@
         "items": [
             {
                 "institution": "DSZC Mechwart",
-                "degree": "Informatikai rendszerüzemeltető (54 481 06)",
+                "degree": "Érettségi bizonyítvány",
                 "startYear": 2019,
+                "endYear": 2023,
+                "description": "Szakgimnáziumi képzés, amely során érettségi bizonyítványt szereztem. A képzés során a számítógépek és hálózatok működését, valamint a rendszerüzemeltetés alapjait tanultam meg."
+            },
+            {
+                "institution": "DSZC Mechwart",
+                "degree": "Informatikai rendszerüzemeltető (54 481 06)",
+                "startYear": 2023,
                 "endYear": 2024,
                 "description": "Szakosodás Windows/Linux szerverkonfigurációra, Cisco hálózatok menedzselésére és rendszeradminisztrációra."
             },
