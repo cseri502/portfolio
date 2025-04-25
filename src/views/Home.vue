@@ -30,7 +30,7 @@ const updateTypewriter = () => {
   }
 
   const app = document.getElementById('role-span') as HTMLSpanElement
-  
+
   typewriterInstance.value = new Typewriter(app, {
     strings: t.value.hero.role,
     autoStart: true,
@@ -94,10 +94,8 @@ const displayedCertifications = computed(() => {
             </div>
           </div>
           <div class="md:w-1/2 flex justify-center">
-            <div class="w-64 h-64 rounded-full bg-gradient-to-br from-sky-400 to-sky-600 p-1 shadow-lg">
-              <div class="w-full h-full rounded-full bg-white dark:bg-gray-900 flex items-center justify-center">
-                <Icon icon="ph:user" class="w-32 h-32 text-sky-500" />
-              </div>
+            <div class="w-64 h-64 rounded-full bg-gradient-to-br from-sky-400 to-sky-600 p-1 shadow-lg overflow-hidden">
+              <div class="w-full h-full rounded-full bg-[url('/IMG_146.jpg')] bg-cover"></div>
             </div>
           </div>
         </div>
@@ -111,7 +109,7 @@ const displayedCertifications = computed(() => {
         <div class="max-w-3xl mx-auto text-center">
           <p class="text-lg text-gray-700 dark:text-gray-300 mb-8 leading-relaxed"
             v-html="t.about.content.replace(/\n/g, '<br>')"></p>
-          <a href="/cv.pdf" target="_blank" class="btn btn-primary inline-flex items-center">
+          <a v-if="false" href="/cv.pdf" target="_blank" class="btn btn-primary inline-flex items-center">
             <Icon icon="ph:file-pdf" class="mr-2 w-5 h-5" />
             {{ t.about.cv }}
           </a>
