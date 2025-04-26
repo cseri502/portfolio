@@ -94,8 +94,15 @@ const displayedCertifications = computed(() => {
             </div>
           </div>
           <div class="md:w-1/2 flex justify-center">
-            <div class="w-64 h-64 rounded-full bg-gradient-to-br from-sky-400 to-sky-600 p-1 shadow-lg overflow-hidden">
-              <div class="w-full h-full rounded-full bg-[url('/IMG_146.jpg')] bg-cover"></div>
+            <div class="relative">
+              <div
+                class="absolute -inset-2 w-84 h-84 rounded-full bg-gradient-to-br from-sky-400 to-sky-600 blur-md opacity-70 animate-pulse">
+              </div>
+              <!-- Main frame -->
+              <div
+                class="w-80 h-80 rounded-full bg-gradient-to-br from-sky-400 to-sky-600 p-1.5 shadow-xl relative z-10">
+                <div class="w-full h-full rounded-full bg-[url('/IMG_146.jpg')] bg-cover"></div>
+              </div>
             </div>
           </div>
         </div>
