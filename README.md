@@ -1,5 +1,6 @@
 <p align="center">
-	</p>
+	<img src="https://github.com/cseri502/portfolio/blob/main/public/abstract-shape.png" width="128" title="Portfolio Website">
+</p>
 
 <h1 align="center">Portfolio Website</h1>
 
