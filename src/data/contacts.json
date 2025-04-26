@@ -1,30 +1,30 @@
 [
     {
-      "icon": "ph:envelope",
-      "title": "Email",
-      "value": "cseresznyesdavid1@outlook.com",
-      "link": "mailto:cseresznyesdavid1@outlook.com",
-      "external": false
+        "icon": "ph:envelope",
+        "title": "Email",
+        "link": "cseresznyesdavid1@outlook.com",
+        "external": false,
+        "type": "email"
     },
     {
-      "icon": "ph:github-logo",
-      "title": "Github",
-      "value": "To my Github profile",
-      "link": "https://github.com/cseri502",
-      "external": true
+        "icon": "ph:github-logo",
+        "title": "Github",
+        "link": "https://github.com/cseri502",
+        "external": true,
+        "type": "url"
     },
     {
-      "icon": "ph:linkedin-logo",
-      "title": "LinkedIn",
-      "value": "To my LinkedIn profile",
-      "link": "https://www.linkedin.com/in/d%C3%A1vid-csereszny%C3%A9s-623085287/",
-      "external": true
+        "icon": "ph:linkedin-logo",
+        "title": "LinkedIn",
+        "link": "https://www.linkedin.com/in/d%C3%A1vid-csereszny%C3%A9s-623085287/",
+        "external": true,
+        "type": "url"
     },
     {
-      "icon": "ph:facebook-logo",
-      "title": "Facebook",
-      "value": "To my Facebook profile",
-      "link": "https://www.facebook.com/davidcseresznyes05",
-      "external": true
+        "icon": "ph:facebook-logo",
+        "title": "Facebook",
+        "link": "https://www.facebook.com/davidcseresznyes05",
+        "external": true,
+        "type": "url"
     }
-  ]
+]

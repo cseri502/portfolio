@@ -258,15 +258,17 @@ const displayedCertifications = computed(() => {
 
               <div class="space-y-6">
                 <div v-for="(item, index) in contactData" :key="index" class="flex items-start">
-                  <div class="bg-sky-500/10 p-3 rounded-full mr-4">
+                  <div class="bg-sky-500/10 p-3 rounded-full mr-4 flex-shrink-0">
                     <Icon :icon="item.icon" class="w-5 h-5 text-sky-500" />
                   </div>
-                  <div>
+                  <div class="min-w-0 flex-1">
                     <h4 class="font-medium text-gray-900 dark:text-white">{{ item.title }}</h4>
-                    <a :href="item.link" :target="item.external ? '_blank' : ''"
+                    <a 
+                      :href="item.type === 'email' ? `mailto:${item.link}` : item.link" 
+                      :target="item.external ? '_blank' : ''"
                       :rel="item.external ? 'noopener noreferrer' : ''"
-                      class="text-gray-600 dark:text-gray-400 hover:text-sky-500 dark:hover:text-sky-500">
-                      {{ item.value }}
+                      class="text-gray-600 dark:text-gray-400 hover:text-sky-500 dark:hover:text-sky-500 break-all overflow-hidden text-ellipsis">
+                      {{ item.link }}
                     </a>
                   </div>
                 </div>

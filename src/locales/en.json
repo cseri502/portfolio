@@ -91,6 +91,8 @@
         "message": "Message",
         "success": "Your message has been sent successfully!",
         "sending": "Sending...",
-        "send": "Send Message"
+        "send": "Send Message",
+        "privacyConsent": "I consent to the processing of my data for the purpose of contacting you.",
+        "privacyError": "Please accept the data processing."
     }
 }

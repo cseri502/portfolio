@@ -11,6 +11,7 @@ const message = ref('')
 const isSubmitting = ref(false)
 const isSuccess = ref(false)
 const errorMessage = ref('')
+const privacyConsent = ref(false)
 
 onMounted(() => {
   emailjs.init({
@@ -23,6 +24,12 @@ const submitForm = async () => {
   errorMessage.value = ''
 
   try {
+    if (!privacyConsent.value) {
+      errorMessage.value = t.value.contactForm.privacyError
+      isSubmitting.value = false
+      return
+    }
+
     const templateParams = {
       from_name: name.value,
       from_email: email.value,
@@ -39,6 +46,7 @@ const submitForm = async () => {
     name.value = ''
     email.value = ''
     message.value = ''
+    privacyConsent.value = false
 
     setTimeout(() => {
       isSuccess.value = false
@@ -78,6 +86,18 @@ const submitForm = async () => {
       </label>
       <textarea id="message" v-model="message" rows="4" required
         class="w-full px-3 py-2 border border-gray-300/50 dark:border-gray-600/50 bg-white/70 dark:bg-gray-700/70 backdrop-blur-sm text-gray-900 dark:text-white focus:outline-none focus:ring-2 focus:ring-primary rounded-md"></textarea>
+    </div>
+
+    <div class="mb-4 flex items-start">
+      <div class="flex items-center h-5">
+        <input id="privacy" v-model="privacyConsent" type="checkbox" required
+          class="w-4 h-4 border border-gray-300 dark:border-gray-600 bg-white/70 dark:bg-gray-700/70 text-primary focus:ring-primary focus:ring-2 rounded" />
+      </div>
+      <div class="ml-3 text-sm">
+        <label for="privacy" class="text-gray-700 dark:text-gray-300">
+          {{ t.contactForm.privacyConsent }}
+        </label>
+      </div>
     </div>
 
     <div v-if="isSuccess"

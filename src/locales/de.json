@@ -97,6 +97,8 @@
         "message": "Nachricht",
         "success": "Ihre Nachricht wurde erfolgreich gesendet!",
         "sending": "Senden...",
-        "send": "Nachricht senden"
+        "send": "Nachricht senden",
+        "privacyConsent": "Ich bin mit der Verarbeitung meiner Daten zum Zwecke der Kontaktaufnahme einverstanden.",
+        "privacyError": "Bitte akzeptieren Sie die Datenverarbeitung."
     }
 }

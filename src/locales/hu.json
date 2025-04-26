@@ -91,6 +91,8 @@
         "message": "Üzenet",
         "success": "Az üzeneted sikeresen elküldve!",
         "sending": "Küldés...",
-        "send": "Üzenet küldése"
+        "send": "Üzenet küldése",
+        "privacyConsent": "Hozzájárulok az adataim kapcsolatfelvétel céljából történő kezeléséhez.",
+        "privacyError": "Kérlek, fogadd el az adatkezelést."
     }
 }
