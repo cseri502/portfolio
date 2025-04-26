@@ -40,7 +40,7 @@
         "present": "Heute"
     },
     "skills": {
-        "title": "Fertigkeiten",
+        "title": "Kompetenzen",
         "categories": [
             "Alle",
             "Frontend",
@@ -83,7 +83,7 @@
     "navItems": [
         { "text": "Über mich", "link": "/#about" },
         { "text": "Ausbildung", "link": "/#education" },
-        { "text": "Fähigkeiten", "link": "/#skills" },
+        { "text": "Kompetenzen", "link": "/#skills" },
         { "text": "Projekte", "link": "/projects" },
         { "text": "Kontakt", "link": "/#contact" }
     ],
