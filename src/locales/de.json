@@ -37,7 +37,7 @@
                 "description": "Derzeit studiere ich Informatik."
             }
         ],
-        "present": "Heute"
+        "present": "Derzeit"
     },
     "skills": {
         "title": "Kompetenzen",
@@ -73,7 +73,7 @@
         }
     },
     "contact": {
-        "title": "Kontakt aufnehmen",
+        "title": "Kontakt",
         "info": "Kontaktinformationen",
         "email": "E-Mail",
         "github": "GitHub",
