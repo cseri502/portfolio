@@ -10,7 +10,7 @@ A personal portfolio website showcasing my skills, education, projects, and prov
 
 ## 🌐 Live Demo
 
-**[Check out the live demo here!](https://cseri502.github.io/portfolio/)**
+**[Check out the live demo here!](https://withdavid.hu/)**
 
 ## 🚀 Technologies & Tools
 

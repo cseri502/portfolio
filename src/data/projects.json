@@ -7,7 +7,7 @@
             "hu": "A mátrixműveletek egyszerű végrehajtására tervezett webalkalmazás.",
             "de": "Eine Webanwendung, mit der sich Matrixoperationen problemlos durchführen lassen."
         },
-        "image": "/portfolio/images/matrixia.png",
+        "image": "/images/matrixia.png",
         "tags": ["Vue", "TypeScript", "TailwindCSS", "C#", ".NET", "Axios"],
         "github": "https://github.com/cseri502/Matrixia",
         "demo": null,
@@ -43,7 +43,7 @@
             "hu": "Egy modern, felhasználóbarát webalkalmazás React, TypeScript és Tailwind CSS alapokon, amely lehetővé teszi a képek közvetlen böngészőben történő szerkesztését.",
             "de": "Eine moderne, benutzerfreundliche Webanwendung, die mit React, TypeScript und Tailwind CSS erstellt wurde und es Benutzern ermöglicht, Bilder direkt im Browser zu bearbeiten."
         },
-        "image": "/portfolio/images/image-editor.png",
+        "image": "/images/image-editor.png",
         "tags": ["React", "TypeScript", "TailwindCSS"],
         "github": "https://github.com/cseri502/image-editor",
         "demo": null,
@@ -106,7 +106,7 @@
             "hu": "Egy React alkalmazás algoritmus implementációk bemutatására több programozási nyelven.",
             "de": "Eine React-Anwendung zur Präsentation von Algorithmus-Implementierungen in mehreren Programmiersprachen."
         },
-        "image": "/portfolio/images/voa.png",
+        "image": "/images/voa.png",
         "tags": ["React", "TypeScript", "TailwindCSS"],
         "github": "https://github.com/cseri502/vault-of-algorithms",
         "demo": null,
@@ -139,7 +139,7 @@
             "hu": "Modern és letisztult weboldal, amely bemutatja projektjeimet, készségeimet és szakmai tapasztalataimat.",
             "de": "Eine moderne und übersichtliche Website, die meine Projekte, Fähigkeiten und Berufserfahrung präsentiert."
         },
-        "image": "/portfolio/images/portfolio-website.png",
+        "image": "/images/portfolio-website.png",
         "tags": ["Vue", "TypeScript", "TailwindCSS"],
         "github": "https://github.com/cseri502/vue-portfolio",
         "demo": null,
@@ -157,7 +157,7 @@
             "hu": "Egy webalkalmazás, amely lehetővé teszi biztonságos jelszavak generálását testreszabható beállítások alapján.",
             "de": "Eine Webanwendung, die es Benutzern ermöglicht, sichere Passwörter basierend auf anpassbaren Einstellungen zu generieren."
         },
-        "image": "/portfolio/images/password-generator.png",
+        "image": "/images/password-generator.png",
         "tags": ["Vue", "TypeScript", "TailwindCSS"],
         "github": "https://github.com/cseri502/password-generator",
         "demo": null,
@@ -208,7 +208,7 @@
             "hu": "Egy elegáns és minimalista gépelési tesztalkalmazás, amely segít a felhasználóknak javítani a gépelési sebességet és pontosságot.",
             "de": "Eine elegante und minimalistische Schreibtest-Anwendung, die Benutzern hilft, ihre Tippgeschwindigkeit und -genauigkeit zu verbessern."
         },
-        "image": "/portfolio/images/type-master.png",
+        "image": "/images/type-master.png",
         "tags": ["Vue", "TypeScript", "TailwindCSS", "Axios"],
         "github": "https://github.com/cseri502/type-master",
         "demo": "https://cseri502.github.io/type-master/",
@@ -259,7 +259,7 @@
             "hu": "Egy teljes körű filmkezelő alkalmazás, amellyel saját filmgyűjteményedet rendszerezheted, szerkesztheted és böngészheted.",
             "de": "Eine umfassende Anwendung zur Verwaltung von Filmen, mit der Nutzer ihre persönliche Filmsammlung organisieren, bearbeiten und durchsuchen können."
         },
-        "image": "/portfolio/images/gomovies.png",
+        "image": "/images/gomovies.png",
         "tags": ["Go", "SQLite", "React", "TailwindCSS", "TypeScript", "Axios"],
         "github": "https://github.com/cseri502/GoMovies",
         "demo": null,
@@ -298,7 +298,7 @@
             "hu": "Egy procedurális 2D világ generátor, ahol a véletlenszerűség találkozik a kreativitással egy pixeles játszótéren, végtelen lehetőségekkel.",
             "de": "Ein prozeduraler 2D-Weltgenerator, bei dem Zufall auf Kreativität in einem pixeligen Spielplatz unendlicher Möglichkeiten trifft."
         },
-        "image": "/portfolio/images/pixelworld.png",
+        "image": "/images/pixelworld.png",
         "tags": ["C#", "Raylib", ".NET"],
         "github": "https://github.com/cseri502/pixelworld",
         "demo": null,
@@ -346,7 +346,7 @@
             "hu": "Egy vizuális szimuláció, amely C# és Raylib használatával készült, és pattogó köröket jelenít meg egy nagyobb körvázon belül. A program bemutatja az ütközés- és vektorkezelés alapelveit, valamint a 2D-s környezetben történő alapvető játékmechanika megvalósítását.",
             "de": "Eine visuelle Simulation, die mit C# und Raylib entwickelt wurde und springende Kreise innerhalb einer größeren Kreisumriss anzeigt. Das Programm demonstriert die Prinzipien der Kollisionsdetektion, Winkel- und Vektorkontrolle sowie die Implementierung grundlegender Spielphysik in einer 2D-Umgebung."
         },
-        "image": "/portfolio/images/bouncy-balls.png",
+        "image": "/images/bouncy-balls.png",
         "tags": ["C#", "Raylib", ".NET"],
         "github": "https://github.com/cseri502/bouncy-balls",
         "demo": null,

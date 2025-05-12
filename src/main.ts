@@ -13,7 +13,7 @@ const routes = [
 ];
 
 const router = createRouter({
-    history: createWebHistory('/portfolio/'),
+    history: createWebHistory('/'),
     routes,
     scrollBehavior(to) {
         if (to.hash) {
