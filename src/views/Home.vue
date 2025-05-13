@@ -7,6 +7,7 @@ import SkillCard from '../components/SkillCard.vue'
 import EducationItem from '../components/EducationItem.vue'
 import ContactForm from '../components/ContactForm.vue'
 import Title from '../components/Title.vue'
+import CategorySelector from '../components/CategorySelector.vue'
 import skillsData from '../data/skills.json'
 import certificationsData from '../data/certifications.json'
 import projectsData from '../data/projects.json';
@@ -143,37 +144,9 @@ const displayedCertifications = computed(() => {
       <div class="section-container">
         <Title :title="t.skills.title" />
 
-        <!-- Skills Tabs -->
         <div class="mb-12">
-          <div class="flex justify-center">
-            <div class="w-full max-w-md">
-              <!-- MD+ -->
-              <div class="hidden md:flex justify-center overflow-x-auto pb-2">
-                <div
-                  class="inline-flex rounded-lg border border-gray-200 dark:border-gray-700 p-1 bg-gray-50 dark:bg-gray-800">
-                  <button v-for="(category, index) in t.skills.categories" :key="category"
-                    @click="activeSkillCategory = index"
-                    class="px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200" :class="activeSkillCategory === index
-                      ? 'bg-sky-500 text-white shadow-md'
-                      : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'">
-                    {{ category }}
-                  </button>
-                </div>
-              </div>
-
-              <!-- SM -->
-              <div class="md:hidden flex flex-wrap justify-center gap-2 p-2">
-                <button v-for="(category, index) in t.skills.categories" :key="category"
-                  @click="activeSkillCategory = index"
-                  class="px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
-                  :class="activeSkillCategory === index
-                    ? 'bg-sky-500 text-white shadow-md'
-                    : 'border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'">
-                  {{ category }}
-                </button>
-              </div>
-            </div>
-          </div>
+          <!-- Skills Tabs -->
+          <CategorySelector :categories="t.skills.categories" v-model="activeSkillCategory" />
 
           <div class="mt-8">
             <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
@@ -189,35 +162,7 @@ const displayedCertifications = computed(() => {
           <p class="text-center text-gray-700 dark:text-gray-300 mb-8 max-w-2xl mx-auto">{{ t.skills.certInfo }}</p>
 
           <!-- Certification Tabs -->
-          <div class="flex justify-center">
-            <div class="w-full max-w-md">
-              <!-- MD+ -->
-              <div class="hidden md:flex justify-center overflow-x-auto pb-2">
-                <div
-                  class="inline-flex rounded-lg border border-gray-200 dark:border-gray-700 p-1 bg-gray-50 dark:bg-gray-800">
-                  <button v-for="(category, index) in t.skills.certCategories" :key="category"
-                    @click="activeCertCategory = index"
-                    class="px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200" :class="activeCertCategory === index
-                      ? 'bg-sky-500 text-white shadow-md'
-                      : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'">
-                    {{ category }}
-                  </button>
-                </div>
-              </div>
-
-              <!-- SM -->
-              <div class="md:hidden flex flex-wrap justify-center gap-2 p-2">
-                <button v-for="(category, index) in t.skills.certCategories" :key="category"
-                  @click="activeCertCategory = index"
-                  class="px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
-                  :class="activeCertCategory === index
-                    ? 'bg-sky-500 text-white shadow-md'
-                    : 'border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'">
-                  {{ category }}
-                </button>
-              </div>
-            </div>
-          </div>
+          <CategorySelector :categories="t.skills.certCategories" v-model="activeCertCategory" />
 
           <div class="max-w-3xl mx-auto mt-8">
             <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
