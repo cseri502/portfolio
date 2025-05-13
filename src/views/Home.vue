@@ -145,16 +145,33 @@ const displayedCertifications = computed(() => {
 
         <!-- Skills Tabs -->
         <div class="mb-12">
-          <div class="flex justify-center overflow-x-auto pb-2">
-            <div
-              class="inline-flex rounded-lg border border-gray-200 dark:border-gray-700 p-1 bg-gray-50 dark:bg-gray-800">
-              <button v-for="(category, index) in t.skills.categories" :key="category"
-                @click="activeSkillCategory = index"
-                class="px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200" :class="activeSkillCategory === index
-                  ? 'bg-sky-500 text-white shadow-md'
-                  : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'">
-                {{ category }}
-              </button>
+          <div class="flex justify-center">
+            <div class="w-full max-w-md">
+              <!-- MD+ -->
+              <div class="hidden md:flex justify-center overflow-x-auto pb-2">
+                <div
+                  class="inline-flex rounded-lg border border-gray-200 dark:border-gray-700 p-1 bg-gray-50 dark:bg-gray-800">
+                  <button v-for="(category, index) in t.skills.categories" :key="category"
+                    @click="activeSkillCategory = index"
+                    class="px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200" :class="activeSkillCategory === index
+                      ? 'bg-sky-500 text-white shadow-md'
+                      : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'">
+                    {{ category }}
+                  </button>
+                </div>
+              </div>
+
+              <!-- SM -->
+              <div class="md:hidden flex flex-wrap justify-center gap-2 p-2">
+                <button v-for="(category, index) in t.skills.categories" :key="category"
+                  @click="activeSkillCategory = index"
+                  class="px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+                  :class="activeSkillCategory === index
+                    ? 'bg-sky-500 text-white shadow-md'
+                    : 'border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'">
+                  {{ category }}
+                </button>
+              </div>
             </div>
           </div>
 
@@ -172,16 +189,33 @@ const displayedCertifications = computed(() => {
           <p class="text-center text-gray-700 dark:text-gray-300 mb-8 max-w-2xl mx-auto">{{ t.skills.certInfo }}</p>
 
           <!-- Certification Tabs -->
-          <div class="flex justify-center overflow-x-auto pb-2">
-            <div
-              class="inline-flex rounded-lg border border-gray-200 dark:border-gray-700 p-1 bg-gray-50 dark:bg-gray-800">
-              <button v-for="(category, index) in t.skills.certCategories" :key="category"
-                @click="activeCertCategory = index"
-                class="px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200" :class="activeCertCategory === index
-                  ? 'bg-sky-500 text-white shadow-md'
-                  : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'">
-                {{ category }}
-              </button>
+          <div class="flex justify-center">
+            <div class="w-full max-w-md">
+              <!-- MD+ -->
+              <div class="hidden md:flex justify-center overflow-x-auto pb-2">
+                <div
+                  class="inline-flex rounded-lg border border-gray-200 dark:border-gray-700 p-1 bg-gray-50 dark:bg-gray-800">
+                  <button v-for="(category, index) in t.skills.certCategories" :key="category"
+                    @click="activeCertCategory = index"
+                    class="px-4 py-2 rounded-md text-sm font-medium transition-colors duration-200" :class="activeCertCategory === index
+                      ? 'bg-sky-500 text-white shadow-md'
+                      : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'">
+                    {{ category }}
+                  </button>
+                </div>
+              </div>
+
+              <!-- SM -->
+              <div class="md:hidden flex flex-wrap justify-center gap-2 p-2">
+                <button v-for="(category, index) in t.skills.certCategories" :key="category"
+                  @click="activeCertCategory = index"
+                  class="px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+                  :class="activeCertCategory === index
+                    ? 'bg-sky-500 text-white shadow-md'
+                    : 'border border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-800 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'">
+                  {{ category }}
+                </button>
+              </div>
             </div>
           </div>
 
@@ -263,10 +297,8 @@ const displayedCertifications = computed(() => {
                   </div>
                   <div class="min-w-0 flex-1">
                     <h4 class="font-medium text-gray-900 dark:text-white">{{ item.title }}</h4>
-                    <a 
-                      :href="item.type === 'email' ? `mailto:${item.link}` : item.link" 
-                      :target="item.external ? '_blank' : ''"
-                      :rel="item.external ? 'noopener noreferrer' : ''"
+                    <a :href="item.type === 'email' ? `mailto:${item.link}` : item.link"
+                      :target="item.external ? '_blank' : ''" :rel="item.external ? 'noopener noreferrer' : ''"
                       class="text-gray-600 dark:text-gray-400 hover:text-sky-500 dark:hover:text-sky-500 break-all overflow-hidden text-ellipsis">
                       {{ item.link }}
                     </a>
