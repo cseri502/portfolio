@@ -17,11 +17,9 @@ import { useLocales } from '../composables/useLocales'
 const { t, currentLanguage } = useLocales();
 
 const skills = skillsData.items;
-const skillCategories = skillsData.categories;
 const certifications = certificationsData.items;
 const certCategories = certificationsData.categories;
 
-const activeSkillCategory = ref(skillCategories.All);
 const activeCertCategory = ref(certCategories.All);
 const typewriterInstance = ref<Typewriter | null>(null);
 
@@ -55,14 +53,6 @@ const sortedEducation = computed(() => {
     }
     return (a.endYear || Infinity) - (b.endYear || Infinity);
   });
-});
-
-const displayedSkills = computed(() => {
-  if (activeSkillCategory.value === skillCategories.All) {
-    return skills;
-  }
-
-  return skills.filter(skill => skill.category === activeSkillCategory.value);
 });
 
 const displayedCertifications = computed(() => {
@@ -145,13 +135,8 @@ const displayedCertifications = computed(() => {
         <Title :title="t.skills.title" />
 
         <div class="mb-12">
-          <!-- Skills Tabs -->
-          <CategorySelector :categories="t.skills.categories" v-model="activeSkillCategory" />
-
-          <div class="mt-8">
-            <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
-              <SkillCard v-for="skill in displayedSkills" :key="skill.name" :name="skill.name" :icon="skill.icon" />
-            </div>
+          <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+            <SkillCard v-for="skill in skills" :key="skill.name" :name="skill.name" :icon="skill.icon" />
           </div>
         </div>
 

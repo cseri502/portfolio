@@ -41,7 +41,6 @@
     },
     "skills": {
         "title": "Skills",
-        "categories": ["All", "Frontend", "Backend", "Databases", "Other"],
         "certifications": "Certifications",
         "certInfo": "Click on the certificate name to open it.",
         "certCategories": ["All", "Networking", "Development", "IT"]

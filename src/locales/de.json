@@ -41,13 +41,6 @@
     },
     "skills": {
         "title": "Kompetenzen",
-        "categories": [
-            "Alle",
-            "Frontend",
-            "Backend",
-            "Datenbanken",
-            "Sonstige"
-        ],
         "certifications": "Zertifikate",
         "certInfo": "Klicken Sie auf den Namen des Zertifikats, um es zu öffnen.",
         "certCategories": ["Alle", "Netzwerke", "Entwicklung", "IT"]

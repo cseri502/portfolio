@@ -41,7 +41,6 @@
     },
     "skills": {
         "title": "Ismeretek",
-        "categories": ["Összes", "Frontend", "Backend", "Adatbázisok", "Egyéb"],
         "certifications": "Tanúsítványok",
         "certInfo": "Kattints a tanúsítvány nevére a megnyitáshoz.",
         "certCategories": ["Összes", "Hálózatok", "Fejlesztés", "IT"]
