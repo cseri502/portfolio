@@ -177,27 +177,45 @@ const displayedCertifications = computed(() => {
           {{ t.projects.description }}
         </p>
 
-        <div class="grid grid-cols-1 md:grid-cols-[repeat(auto-fit,minmax(250px,1fr))] columns-auto gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
           <div
-            v-for="project in projectsData.filter(p => ['Matrixia', 'Vault of Algorithms', 'GoMovies'].includes(p.title))"
+            v-for="project in projectsData.filter(p => ['Matrixia', 'Vault of Algorithms', 'GoMovies', 'Type Master'].includes(p.title))"
             :key="project.id"
-            class="bg-white dark:bg-gray-800 rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
-            <div class="h-48 bg-gradient-to-r from-sky-500 to-indigo-500 flex items-center justify-center">
-              <Icon icon="ph:code" class="w-16 h-16 text-white" />
+            class="bg-white dark:bg-gray-800 rounded-lg p-6 shadow-sm border border-gray-100 dark:border-gray-700 hover:shadow-md transition-shadow duration-200 relative">
+            
+            <div class="absolute inset-0 opacity-20 pointer-events-none overflow-hidden">
+              <div class="absolute right-6 bottom-6 text-6xl text-sky-800 dark:text-sky-500">
+                <Icon icon="mdi:matrix" v-if="project.title === 'Matrixia'" />
+                <Icon icon="ph:vault-duotone" v-if="project.title === 'Vault of Algorithms'" />
+                <Icon icon="bxs:movie-play" v-if="project.title === 'GoMovies'" />
+                <Icon icon="material-symbols-light:keyboard-rounded" v-if="project.title === 'Type Master'" />
+              </div>
             </div>
-            <div class="p-6">
-              <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">{{ project.title }}</h3>
+
+            <div class="relative z-10">
+              <div class="flex items-center mb-4">
+                <div class="bg-sky-500/10 p-3 rounded-md mr-3 flex-shrink-0">
+                  <Icon icon="ph:code" class="w-6 h-6 text-sky-500" />
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 dark:text-white">{{ project.title }}</h3>
+              </div>
+
               <p class="text-gray-600 dark:text-gray-400 mb-4">{{ project.description[currentLanguage] }}</p>
+
               <div class="flex flex-wrap gap-2 mb-4">
                 <span v-for="tech in project.tags" :key="tech"
-                  class="text-xs px-2 py-1 bg-sky-500/10 text-sky-500 rounded-md">
+                  class="text-xs px-2 py-1 bg-sky-500/10 text-sky-700 dark:text-sky-300 rounded-md">
                   {{ tech }}
                 </span>
               </div>
-              <router-link :to="`projects/${project.id}`" class="btn btn-sm btn-primary inline-flex items-center mt-2">
-                {{ t.projects.viewProject }}
-                <Icon icon="ph:arrow-right" class="ml-1 w-4 h-4" />
-              </router-link>
+
+              <div class="mt-4">
+                <router-link :to="`projects/${project.id}`"
+                  class="inline-flex items-center px-3 py-1.5 text-sm bg-sky-600 hover:bg-sky-700 text-white rounded-md transition-colors duration-200">
+                  {{ t.projects.viewProject }}
+                  <Icon icon="ph:arrow-right" class="ml-1 w-4 h-4" />
+                </router-link>
+              </div>
             </div>
           </div>
         </div>
