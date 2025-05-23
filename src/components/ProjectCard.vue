@@ -36,7 +36,7 @@ defineProps<{
 
       <!-- Tags -->
       <div class="flex flex-wrap gap-2 mb-4">
-        <span v-for="tag in project.tags" :key="tag" class="text-xs px-2 py-1 bg-sky-500/10 text-sky-500 rounded-md">
+        <span v-for="tag in project.tags" :key="tag" class="text-xs px-2 py-1 bg-sky-500/10 text-sky-700 dark:text-sky-300 rounded-md">
           {{ tag }}
         </span>
       </div>
