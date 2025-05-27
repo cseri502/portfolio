@@ -1,0 +1,94 @@
+[
+    {
+        "id": 1,
+        "title": "Phone Stand",
+        "description": {
+            "en": "An ergonomic phone stand designed for desktop use with charging cable support. Features a strategically placed cutout at the bottom middle to maintain access to the home indicator on iOS and Android devices while charging. The stand offers optimal viewing angles for video calls, media consumption, and notifications while keeping your device securely positioned and easily accessible.",
+            "hu": "Ergonomikus telefontartó asztali használatra, töltőkábel támogatással. Stratégiailag elhelyezett kivágással rendelkezik az alsó középső részen, hogy a töltés közben is hozzáférhető maradjon az iOS és Android eszközök otthon indikátora. A tartó optimális megtekintési szögeket kínál videohívásokhoz, médiafogyasztáshoz és értesítésekhez, miközben biztonságosan tartja és könnyen elérhetővé teszi az eszközt.",
+            "de": "Ein ergonomischer Telefonständer für den Desktop-Einsatz mit Ladekabel-Unterstützung. Verfügt über einen strategisch platzierten Ausschnitt in der unteren Mitte, um den Zugriff auf die Home-Anzeige bei iOS- und Android-Geräten während des Ladens zu gewährleisten. Der Ständer bietet optimale Betrachtungswinkel für Videoanrufe, Medienkonsum und Benachrichtigungen, während Ihr Gerät sicher positioniert und leicht zugänglich bleibt."
+        },
+        "thumbnail": null,
+        "stlFile": "/models/phone-stand.STL",
+        "tags": ["Phone", "Desktop", "Ergonomic", "Charging", "Accessory", "Mobile"],
+        "dimensions": {
+            "width": 70,
+            "height": 113,
+            "depth": 70,
+            "unit": "mm"
+        },
+        "printSettings": {
+            "layerHeight": 0.2,
+            "infill": 25,
+            "printTime": "5h 29m"
+        }
+    },
+    {
+        "id": 2,
+        "title": "Card Holder",
+        "description": {
+            "en": "A handy desktop organizer that holds credit card-sized cards and a pen. It's simple and practical - just what you need to keep your desk tidy without taking up much space. There's a small '2025' engraved inside the card slot, which was added when the model was designed as a little detail.",
+            "hu": "Praktikus asztali rendszerező bankkártya méretű kártyákhoz és egy tollhoz. Egyszerű és hasznos - pont amire szükség van az íróasztal rendben tartásához anélkül, hogy sok helyet foglalna. A kártyatartóban egy kis '2025' gravírozás található, amit a tervezés során adtam hozzá apró részletként.",
+            "de": "Ein praktischer Schreibtisch-Organizer für Karten in Kreditkartengröße und einen Stift. Einfach und nützlich - genau das, was man braucht, um den Schreibtisch ordentlich zu halten, ohne viel Platz wegzunehmen. Im Kartenfach ist eine kleine '2025' eingraviert, die beim Entwerfen als kleines Detail hinzugefügt wurde."
+        },
+        "thumbnail": null,
+        "stlFile": "/models/card-holder.stl",
+        "tags": ["Card", "Desktop", "Pen", "Accessory"],
+        "dimensions": {
+            "width": 120,
+            "height": 25,
+            "depth": 25,
+            "unit": "mm"
+        },
+        "printSettings": {
+            "layerHeight": 0.2,
+            "infill": 15,
+            "printTime": "37m"
+        }
+    },
+    {
+        "id": 3,
+        "title": "Gear Shaped Spinner",
+        "description": {
+            "en": "A fidget spinner with a gear design that spins just like the classic version. The cool thing about this one is that it prints in one piece - no need to add bearings or assemble anything. Just print it and it's ready to spin. Perfect for keeping your hands busy or just having something satisfying to fidget with.",
+            "hu": "Egy fogaskerék alakú fidget spinner, ami ugyanúgy pörög, mint a klasszikus változat. A különlegessége, hogy egy darabban nyomtatható - nem kell csapágyat belerakni vagy összeszerelni. Csak kinyomtatod és már pöröghet is. Tökéletes arra, hogy elfoglald a kezed, vagy csak legyen valami nyugtató, amivel játszhatsz.",
+            "de": "Ein Fidget Spinner mit Zahnrad-Design, der genauso funktioniert wie die klassische Version. Das Besondere daran: er wird in einem Stück gedruckt - keine Kugellager einbauen oder zusammenbauen nötig. Einfach drucken und schon kann gedreht werden. Perfekt, um die Hände beschäftigt zu halten oder einfach etwas Beruhigendes zum Spielen zu haben."
+        },
+        "thumbnail": null,
+        "stlFile": "/models/gear-spinner.stl",
+        "tags": ["Gear", "Spinner", "Toy"],
+        "dimensions": {
+            "width": 55,
+            "height": 7,
+            "depth": 55,
+            "unit": "mm"
+        },
+        "printSettings": {
+            "layerHeight": 0.2,
+            "infill": 15,
+            "printTime": "17m"
+        }
+    },
+    {
+        "id": 4,
+        "title": "Hodor Wedge",
+        "description": {
+            "en": "A simple door wedge with 'HODOR' printed on it. It's a Game of Thrones reference - 'Hold the door!' - but it works just like any regular door stop. Perfect for keeping your doors open.",
+            "hu": "Egy egyszerű ajtóék 'HODOR' felirattal. Trónok Harca utalás a 'Hold the door!' jelenetre, de pont úgy működik, mint bármelyik hagyományos ajtótámasz. Tökéletes ajtók nyitva tartásához.",
+            "de": "Ein einfacher Türkeil mit 'HODOR' Aufdruck. Eine Game of Thrones Anspielung auf 'Hold the door!' - funktioniert aber wie jeder normale Türstopper. Perfekt zum Offenhalten von Türen."
+        },
+        "thumbnail": null,
+        "stlFile": "/models/door-wedge.stl",
+        "tags": ["Accessory", "Home"],
+        "dimensions": {
+            "width": 50,
+            "height": 10,
+            "depth": 20,
+            "unit": "mm"
+        },
+        "printSettings": {
+            "layerHeight": 0.2,
+            "infill": 20,
+            "printTime": "12m"
+        }
+    }
+]

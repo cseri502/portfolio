@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { Icon } from '@iconify/vue';
 import { useLocales } from '../composables/useLocales'
+import Tag from './Tag.vue';
 
 const { t } = useLocales();
 
@@ -36,9 +37,7 @@ defineProps<{
 
       <!-- Tags -->
       <div class="flex flex-wrap gap-2 mb-4">
-        <span v-for="tag in project.tags" :key="tag" class="text-xs px-2 py-1 bg-sky-500/10 text-sky-700 dark:text-sky-300 rounded-md">
-          {{ tag }}
-        </span>
+        <Tag v-for="tag in project.tags" :key="tag" :text="tag" :isSmall="true" />
       </div>
     </div>
 

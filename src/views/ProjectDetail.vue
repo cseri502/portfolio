@@ -3,6 +3,7 @@ import { onMounted, computed } from 'vue'
 import { useRoute, useRouter } from 'vue-router'
 import { Icon } from '@iconify/vue'
 import { useLocales } from '../composables/useLocales'
+import Tag from '../components/Tag.vue'
 import projects from '../data/projects.json';
 
 const { t, currentLanguage } = useLocales();
@@ -36,10 +37,7 @@ onMounted(() => {
         <div class="p-6 border-b border-gray-200/30 dark:border-gray-700/30">
           <h1 class="text-3xl font-bold text-gray-900 dark:text-white mb-2">{{ project.title }}</h1>
           <div class="flex flex-wrap gap-2 mb-4">
-            <span v-for="tag in project.tags" :key="tag"
-              class="text-xs px-2 py-1 bg-sky-500/10 text-sky-700 dark:text-sky-300 rounded-md">
-              {{ tag }}
-            </span>
+            <Tag v-for="tag in project.tags" :text="tag" :isSmall="false" />
           </div>
           <div class="flex space-x-4">
             <a v-if="project.github" :href="project.github" target="_blank" rel="noopener noreferrer"
