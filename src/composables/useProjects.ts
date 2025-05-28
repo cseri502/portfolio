@@ -1,19 +1,41 @@
-import { ref } from 'vue'
+import { ref } from 'vue';
+import { useRouter, useRoute } from 'vue-router';
 
-const activeTab = ref<string>('projects');
+const activeTab = ref('projects');
 
 export function useProjects() {
-    const setActiveTab = (tab: string) => {
-        activeTab.value = tab
-    }
+    const router = useRouter();
+    const route = useRoute();
 
-    const getActiveTab = () => {
-        return activeTab.value
-    }
+    const setActiveTab = (tab: string) => {
+        activeTab.value = tab;
+
+        const currentQuery = { ...route.query };
+        currentQuery.tab = tab;
+
+        router.replace({
+            path: route.path,
+            query: currentQuery,
+        });
+    };
+
+    const initializeTabFromUrl = () => {
+        const urlTab = route.query.tab as string;
+
+        if (urlTab && (urlTab === 'projects' || urlTab === 'models')) {
+            activeTab.value = urlTab;
+        } else {
+            activeTab.value = 'projects';
+
+            if (route.path === '/projects') {
+                setActiveTab('projects');
+            }
+        }
+    };
 
     return {
         activeTab,
         setActiveTab,
-        getActiveTab
-    }
+        initializeTabFromUrl,
+    };
 }

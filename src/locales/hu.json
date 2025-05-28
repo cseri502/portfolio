@@ -52,17 +52,42 @@
         "viewAll": "Összes projekt megtekintése",
         "page": {
             "title": "Projektek",
-            "subtitle": "Itt van néhány projekt, amin dolgoztam. Szűrheted őket technológia szerint, vagy kattinthatsz egy projektre további részletekért.",
+            "subtitle": "Itt van néhány projekt, amin dolgoztam. Szűrheted őket típus, technológia szerint, vagy kattinthatsz egy projektre további részletekért.",
             "noProjects": "Nem található projekt",
             "noItemsFound": "Egyetlen projekt sem felel meg a kiválasztott szűrőnek. Próbálj meg másik technológiát választani.",
-            "all": "Összes"
+            "all": "Összes",
+            "projectTypes": ["Fejlesztés", "3D Modellezés"],
+            "links": "Hivatkozások"
         },
         "card": "Részletek megtekintése",
         "details": {
-            "backToProjects": "Vissza a projektekhez",
+            "backTo": {
+                "projects": "Vissza a projektekhez",
+                "models": "Vissza a modellekhez"
+            },
             "projectOverview": "Projektáttekintés",
             "features": "Funkciók",
             "demo": "Bemutató"
+        },
+        "modelDetails": {
+            "specifications": {
+                "title": "Specifikációk",
+                "dimensions": "Méretek",
+                "volume": "Térfogat"
+            },
+            "printSettings": {
+                "title": "Ajánlott nyomtatási beállítások",
+                "layerHeight": "Rétegmagasság",
+                "infill": "Kitöltés",
+                "printTime": "Becsült nyomtatási idő"
+            },
+            "download": "STL letöltése",
+            "controls": {
+                "title": "3D irányítások",
+                "rotate": "Bal egérgomb + húzás a forgatáshoz",
+                "move": "Jobb egérgomb + húzás a mozgatáshoz",
+                "zoom": "Görgetés a nagyításhoz/kicsinyítéshez"
+            }
         }
     },
     "contact": {

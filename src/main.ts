@@ -4,13 +4,13 @@ import './style.css';
 import App from './App.vue';
 import Home from './views/Home.vue';
 import Projects from './views/Projects.vue';
-import ProjectDetail from './views/ProjectDetail.vue';
 import ModelDetails from './views/ModelDetails.vue';
+import ProjectDetails from './views/ProjectDetails.vue';
 
 const routes = [
     { path: '/', component: Home },
     { path: '/projects', component: Projects },
-    { path: '/projects/:id', component: ProjectDetail },
+    { path: '/projects/:id', component: ProjectDetails },
     { path: '/models/:id', component: ModelDetails },
 ];
 

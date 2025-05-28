@@ -37,18 +37,12 @@ onMounted(() => {
     <!-- Header -->
     <div
       class="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-b border-gray-200/30 dark:border-gray-700/30 sticky top-0 z-20">
-      <div class="container mx-auto px-4 py-3 sm:py-4">
-        <div class="flex items-center justify-between">
-          <button @click="goBackToProjects"
-            class="inline-flex items-center text-sky-500 hover:text-sky-600 transition-colors">
-            <Icon icon="ph:arrow-left" class="mr-1 sm:mr-2 w-4 h-4 sm:w-5 sm:h-5" />
-            <span class="text-sm sm:text-base">Back to Projects</span>
-          </button>
-          <h1 class="text-lg sm:text-xl font-bold text-gray-900 dark:text-white text-center flex-1 mx-4 truncate">
-            {{ model.title }}
-          </h1>
-          <div class="w-12"></div> <!-- Spacer for balance -->
-        </div>
+      <div class="px-4 py-3 sm:py-4 flex justify-start">
+        <button @click="goBackToProjects"
+          class="inline-flex items-center text-sky-500 hover:text-sky-600 transition-colors">
+          <Icon icon="ph:arrow-left" class="mr-1 sm:mr-2 w-4 h-4 sm:w-5 sm:h-5" />
+          <span class="text-sm sm:text-base">{{ t.projects.details.backTo.models }}</span>
+        </button>
       </div>
     </div>
 
@@ -97,19 +91,19 @@ onMounted(() => {
           <div class="mb-8">
             <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
               <Icon icon="ph:ruler" class="mr-2 w-5 h-5 text-sky-500" />
-              Specifications
+              {{ t.projects.modelDetails.specifications.title }}
             </h3>
             <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
               <div v-if="model.dimensions" class="grid grid-cols-2 gap-4 mb-4">
                 <div>
-                  <div class="text-sm text-gray-500 dark:text-gray-400">Dimensions</div>
+                  <div class="text-sm text-gray-500 dark:text-gray-400">{{ t.projects.modelDetails.specifications.dimensions }}</div>
                   <div class="font-medium text-gray-900 dark:text-white">
                     {{ model.dimensions.width }} × {{ model.dimensions.height }} × {{ model.dimensions.depth }} {{
                       model.dimensions.unit }}
                   </div>
                 </div>
                 <div>
-                  <div class="text-sm text-gray-500 dark:text-gray-400">Volume</div>
+                  <div class="text-sm text-gray-500 dark:text-gray-400">{{ t.projects.modelDetails.specifications.volume }}</div>
                   <div class="font-medium text-gray-900 dark:text-white">
                     {{ (model.dimensions.width * model.dimensions.height * model.dimensions.depth).toFixed(2) }} {{
                       model.dimensions.unit }}³
@@ -123,20 +117,20 @@ onMounted(() => {
           <div v-if="model.printSettings" class="mb-8">
             <h3 class="text-xl font-semibold text-gray-900 dark:text-white mb-4 flex items-center">
               <Icon icon="ph:gear" class="mr-2 w-5 h-5 text-sky-500" />
-              Recommended Print Settings
+              {{ t.projects.modelDetails.printSettings.title }}
             </h3>
             <div class="bg-gray-50 dark:bg-gray-800 rounded-lg p-6">
               <div class="grid grid-cols-2 gap-4">
                 <div>
-                  <div class="text-sm text-gray-500 dark:text-gray-400">Layer Height</div>
+                  <div class="text-sm text-gray-500 dark:text-gray-400">{{ t.projects.modelDetails.printSettings.layerHeight }}</div>
                   <div class="font-medium text-gray-900 dark:text-white">{{ model.printSettings.layerHeight }}mm</div>
                 </div>
                 <div>
-                  <div class="text-sm text-gray-500 dark:text-gray-400">Infill</div>
+                  <div class="text-sm text-gray-500 dark:text-gray-400">{{ t.projects.modelDetails.printSettings.infill }}</div>
                   <div class="font-medium text-gray-900 dark:text-white">{{ model.printSettings.infill }}%</div>
                 </div>
                 <div class="col-span-2">
-                  <div class="text-sm text-gray-500 dark:text-gray-400">Estimated Print Time</div>
+                  <div class="text-sm text-gray-500 dark:text-gray-400">{{ t.projects.modelDetails.printSettings.printTime }}</div>
                   <div class="font-medium text-gray-900 dark:text-white">{{ model.printSettings.printTime }}</div>
                 </div>
               </div>
@@ -148,7 +142,7 @@ onMounted(() => {
             <a :href="model.stlFile" download
               class="flex-1 bg-gradient-to-r from-blue-500 to-sky-500 text-white px-6 py-3 rounded-lg hover:from-blue-600 hover:to-sky-600 transition-all duration-300 text-center font-medium">
               <Icon icon="ph:download" class="mr-2 w-5 h-5 inline" />
-              Download STL
+              {{ t.projects.modelDetails.download }}
             </a>
           </div>
         </div>
@@ -186,19 +180,19 @@ onMounted(() => {
         <!-- Instructions -->
         <div
           class="absolute bottom-4 left-4 right-4 bg-white/90 dark:bg-gray-800/90 backdrop-blur-sm rounded-lg p-4 shadow-lg">
-          <h4 class="font-medium text-gray-900 dark:text-white mb-2">3D Controls</h4>
+          <h4 class="font-medium text-gray-900 dark:text-white mb-2">{{ t.projects.modelDetails.controls.title }}</h4>
           <div class="text-sm text-gray-600 dark:text-gray-400 space-y-1">
             <div class="flex items-center">
               <Icon icon="ph:mouse" class="w-4 h-4 mr-2" />
-              <span>Left click + drag to rotate</span>
+              <span>{{ t.projects.modelDetails.controls.rotate }}</span>
             </div>
             <div class="flex items-center">
               <Icon icon="ph:mouse" class="w-4 h-4 mr-2" />
-              <span>Right click + drag to pan</span>
+              <span>{{ t.projects.modelDetails.controls.move }}</span>
             </div>
             <div class="flex items-center">
               <Icon icon="ph:mouse" class="w-4 h-4 mr-2" />
-              <span>Scroll to zoom</span>
+              <span>{{ t.projects.modelDetails.controls.zoom }}</span>
             </div>
           </div>
         </div>

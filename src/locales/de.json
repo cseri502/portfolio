@@ -52,17 +52,42 @@
         "viewAll": "Alle Projekte ansehen",
         "page": {
             "title": "Projekte",
-            "subtitle": "Hier sind einige der Projekte, an denen ich gearbeitet habe. Sie können sie nach Technologie filtern oder auf ein Projekt klicken, um mehr Details zu sehen.",
+            "subtitle": "Hier sind einige der Projekte, an denen ich gearbeitet habe. Sie können sie nach Typ, Technologie filtern oder auf ein Projekt klicken, um weitere Details zu sehen.",
             "noProjects": "Keine Projekte gefunden",
             "noItemsFound": "Keine Projekte entsprechen dem ausgewählten Filter. Versuchen Sie, eine andere Technologie auszuwählen.",
-            "all": "Alle"
+            "all": "Alle",
+            "projectTypes": ["Entwicklung", "3D Modellierung"],
+            "links": "Verweise"
         },
         "card": "Details anzeigen",
         "details": {
-            "backToProjects": "Zurück zu den Projekten",
+            "backTo": {
+                "projects": "Zurück zu den Projekten",
+                "models": "Zurück zu den Modellen"
+            },
             "projectOverview": "Projektübersicht",
             "features": "Funktionen",
             "demo": "Live-Demo"
+        },
+        "modelDetails": {
+            "specifications": {
+                "title": "Spezifikationen",
+                "dimensions": "Abmessungen",
+                "volume": "Volumen"
+            },
+            "printSettings": {
+                "title": "Empfohlene Druckeinstellungen",
+                "layerHeight": "Schichthöhe",
+                "infill": "Füllung",
+                "printTime": "Geschätzte Druckzeit"
+            },
+            "download": "STL herunterladen",
+            "controls": {
+                "title": "3D-Steuerungen",
+                "rotate": "Linksklick + ziehen zum Drehen",
+                "move": "Rechtsklick + ziehen zum Bewegen",
+                "zoom": "Scrollen zum Vergrößern/Verkleinern"
+            }
         }
     },
     "contact": {

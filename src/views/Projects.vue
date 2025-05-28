@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue'
+import { ref, computed, watch, onMounted } from 'vue'
 import { useRoute } from 'vue-router'
 import { Icon } from '@iconify/vue'
 import { useLocales } from '../composables/useLocales'
@@ -11,15 +11,19 @@ import projects from '../data/projects.json'
 import models from '../data/models.json'
 
 const { t, currentLanguage } = useLocales()
-const { activeTab, setActiveTab } = useProjects()
+const { activeTab, setActiveTab, initializeTabFromUrl } = useProjects()
 const filterTag = ref('')
 
 const route = useRoute()
 onMounted(() => {
-  if (route.query.tab === 'models') {
-    setActiveTab('models')
-  }
+  initializeTabFromUrl()
 })
+
+watch(() => route.query.tab, (newTab) => {
+  if (newTab && (newTab === 'projects' || newTab === 'models')) {
+    activeTab.value = newTab as string
+  }
+}, { immediate: true })
 
 const filteredProjects = computed(() => {
   if (!filterTag.value) {
@@ -73,24 +77,24 @@ function switchTab(tab: string) {
     <div class="section-container">
       <Title :title="t.projects.page.title" />
       <p class="text-center text-gray-700 dark:text-gray-300 mb-10 max-w-2xl mx-auto">
-        Explore my portfolio of software projects and 3D modeling work. Each project showcases different skills and technologies.
+        {{ t.projects.page.subtitle }}
       </p>
 
       <!-- Tab Navigation -->
       <div class="flex justify-center mb-8">
         <div class="w-1/2 flex flex-col md:flex-row bg-white/70 dark:bg-gray-800/70 backdrop-blur-sm rounded-lg p-1 border border-gray-200/30 dark:border-gray-700/30">
           <button @click="switchTab('projects')" 
-            class="w-full px-6 py-2 rounded-md transition-all duration-150 flex items-center justify-center"
+            class="w-full px-6 py-2 rounded-md transition-all duration-150 flex items-center justify-center cursor-pointer"
             :class="activeTab === 'projects' ? 'bg-sky-500 text-white shadow-lg' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'">
             <Icon icon="ph:code" class="mr-2 w-5 h-5" />
-            Software Projects
+            {{ t.projects.page.projectTypes[0] }}
             <span class="ml-2 text-sm opacity-75">({{ projects.length }})</span>
           </button>
           <button @click="switchTab('models')" 
-            class="w-full px-6 py-2 rounded-md transition-all duration-150 flex items-center justify-center"
+            class="w-full px-6 py-2 rounded-md transition-all duration-150 flex items-center justify-center cursor-pointer"
             :class="activeTab === 'models' ? 'bg-sky-500 text-white shadow-lg' : 'text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-700'">
             <Icon icon="ph:cube" class="mr-2 w-5 h-5" />
-            3D Models
+            {{ t.projects.page.projectTypes[1] }}
             <span class="ml-2 text-sm opacity-75">({{ models.length }})</span>
           </button>
         </div>
