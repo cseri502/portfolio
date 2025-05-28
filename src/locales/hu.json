@@ -69,6 +69,8 @@
             "features": "Funkciók",
             "demo": "Bemutató"
         },
+        "viewSource": "Forráskód megtekintése",
+        "viewDemo": "Demó megtekintése",
         "modelDetails": {
             "specifications": {
                 "title": "Specifikációk",
@@ -87,7 +89,15 @@
                 "rotate": "Bal egérgomb + húzás a forgatáshoz",
                 "move": "Jobb egérgomb + húzás a mozgatáshoz",
                 "zoom": "Görgetés a nagyításhoz/kicsinyítéshez"
-            }
+            },
+            "touchControls": {
+                "title": "Érintőképernyős irányítások",
+                "rotate": "Két ujjal húzva a forgatáshoz",
+                "move": "Két ujjal húzva mozgatás",
+                "zoom": "Összehúzás vagy széthúzás a nagyításhoz/kicsinyítéshez"
+            },
+            "viewIn3D": "Megtekintés 3D-ben",
+            "mobileNav": ["Információ", "3D Nézet"]
         }
     },
     "contact": {

@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import { ref, computed, onMounted, watch } from 'vue'
 import { Icon } from '@iconify/vue'
+// @ts-ignore
 import Typewriter from 'typewriter-effect/dist/core'
 import SkillCard from '../components/SkillCard.vue'
 import EducationItem from '../components/EducationItem.vue'

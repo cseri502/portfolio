@@ -41,9 +41,7 @@ onMounted(() => {
             <Icon icon="ph:arrow-left" class="mr-1 sm:mr-2 w-4 h-4 sm:w-5 sm:h-5" />
             <span class="text-sm sm:text-base">{{ t.projects.details.backTo.projects }}</span>
           </button>
-          <h1 class="text-lg sm:text-xl font-bold text-gray-900 dark:text-white text-center flex-1 mx-4 truncate">
-            {{ project.title }}
-          </h1>
+          
           <div class="w-12"></div> <!-- Spacer for balance -->
         </div>
       </div>
@@ -54,20 +52,11 @@ onMounted(() => {
       <div class="bg-white dark:bg-gray-900 rounded-lg overflow-hidden shadow-lg">
         <!-- Project header -->
         <div class="p-6 border-b border-gray-200/30 dark:border-gray-700/30">
-          <div class="flex flex-wrap gap-2 mb-4">
+          <h1 class="pb-6 text-lg sm:text-xl font-bold text-center text-gray-900 dark:text-white mx-4 truncate">
+            {{ project.title }}
+          </h1>
+          <div class="flex flex-wrap justify-center gap-2 mb-4">
             <Tag v-for="tag in project.tags" :text="tag" :isSmall="false" />
-          </div>
-          <div class="flex flex-wrap gap-4 mb-4">
-            <a v-if="project.github" :href="project.github" target="_blank" rel="noopener noreferrer"
-              class="inline-flex items-center text-gray-700 dark:text-gray-300 hover:text-sky-500 dark:hover:text-sky-500 transition-colors">
-              <Icon icon="ph:github-logo" class="mr-2 w-5 h-5" />
-              GitHub Repository
-            </a>
-            <a v-if="project.demo" :href="project.demo" target="_blank" rel="noopener noreferrer"
-              class="inline-flex items-center text-gray-700 dark:text-gray-300 hover:text-sky-500 dark:hover:text-sky-500 transition-colors">
-              <Icon icon="ph:globe" class="mr-2 w-5 h-5" />
-              {{ t.projects.details.demo }}
-            </a>
           </div>
         </div>
 
@@ -111,14 +100,14 @@ onMounted(() => {
           <!-- Actions -->
           <div class="flex flex-col sm:flex-row gap-4">
             <a v-if="project.demo" :href="project.demo" target="_blank" rel="noopener noreferrer"
-              class="flex-1 bg-gradient-to-r from-sky-500 to-indigo-500 text-white px-6 py-3 rounded-lg hover:from-sky-600 hover:to-indigo-600 transition-all duration-300 text-center font-medium inline-flex items-center justify-center">
+              class="flex-1 bg-gradient-to-r from-blue-500 to-sky-500 text-white px-6 py-3 rounded-lg hover:from-blue-600 hover:to-sky-600 transition-all duration-300 text-center font-medium inline-flex items-center justify-center">
               <Icon icon="ph:globe" class="mr-2 w-5 h-5" />
-              View Live Demo
+              {{ t.projects.viewDemo }}
             </a>
             <a v-if="project.github" :href="project.github" target="_blank" rel="noopener noreferrer"
               class="flex-1 bg-gray-800 dark:bg-gray-700 text-white px-6 py-3 rounded-lg hover:bg-gray-900 dark:hover:bg-gray-600 transition-all duration-300 text-center font-medium inline-flex items-center justify-center">
               <Icon icon="ph:github-logo" class="mr-2 w-5 h-5" />
-              View Source Code
+              {{ t.projects.viewSource }}
             </a>
           </div>
         </div>

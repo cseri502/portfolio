@@ -69,6 +69,8 @@
             "features": "Funktionen",
             "demo": "Live-Demo"
         },
+        "viewSource": "Quellcode ansehen",
+        "viewDemo": "Live-Demo ansehen",
         "modelDetails": {
             "specifications": {
                 "title": "Spezifikationen",
@@ -87,7 +89,15 @@
                 "rotate": "Linksklick + ziehen zum Drehen",
                 "move": "Rechtsklick + ziehen zum Bewegen",
                 "zoom": "Scrollen zum Vergrößern/Verkleinern"
-            }
+            },
+            "touchControls": {
+                "title": "Touch-Steuerungen",
+                "rotate": "Tippen und ziehen zum Drehen",
+                "move": "Zwei Finger tippen und ziehen zum Bewegen",
+                "zoom": "Zwei Finger zusammenziehen/auseinanderziehen zum Zoomen"
+            },
+            "viewIn3D": "In 3D ansehen",
+            "mobileNav": ["Info", "3D Ansicht"]
         }
     },
     "contact": {

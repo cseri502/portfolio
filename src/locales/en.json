@@ -69,6 +69,8 @@
             "features": "Features",
             "demo": "Live Demo"
         },
+        "viewSource": "View Source Code",
+        "viewDemo": "View Live Demo",
         "modelDetails": {
             "specifications": {
                 "title": "Specifications",
@@ -87,7 +89,15 @@
                 "rotate": "Left click + drag to rotate",
                 "move": "Right click + drag to move",
                 "zoom": "Scroll to zoom in/out"
-            }
+            },
+            "touchControls": {
+                "title": "3D Touch Controls",
+                "rotate": "Touch and drag to rotate",
+                "move": "Two-finger drag to move",
+                "zoom": "Pinch to zoom in/out"
+            },
+            "viewIn3D": "View in 3D",
+            "mobileNav": ["Info", "3D View"]
         }
     },
     "contact": {

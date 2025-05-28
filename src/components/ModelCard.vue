@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { Icon } from '@iconify/vue'
+import { useLocales } from '../composables/useLocales'
 
 interface IModel {
   id: number
@@ -24,6 +25,8 @@ interface IModel {
 defineProps<{
   model: IModel
 }>()
+
+const { t } = useLocales()
 </script>
 
 <template>
@@ -48,7 +51,7 @@ defineProps<{
       <div v-if="model.dimensions" class="mb-4 p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
         <div class="flex items-center mb-2">
           <Icon icon="ph:ruler" class="w-4 h-4 text-gray-500 dark:text-gray-400 mr-2" />
-          <span class="text-sm font-medium text-gray-700 dark:text-gray-300">Dimensions</span>
+          <span class="text-sm font-medium text-gray-700 dark:text-gray-300">{{ t.projects.modelDetails.specifications.dimensions }}</span>
         </div>
         <div class="text-sm text-gray-600 dark:text-gray-400">
           {{ model.dimensions.width }} × {{ model.dimensions.height }} × {{ model.dimensions.depth }} {{ model.dimensions.unit }}
@@ -67,7 +70,7 @@ defineProps<{
     <div class="p-4 pt-0 mt-auto">
       <router-link :to="`/models/${model.id}`" class="w-full bg-gradient-to-r from-blue-500 to-sky-500 text-white px-4 py-2 rounded-lg hover:from-blue-600 hover:to-sky-600 transition-all duration-300 inline-flex items-center justify-center group">
         <Icon icon="ph:cube" class="mr-2 w-4 h-4 group-hover:scale-110 transition-transform duration-200" />
-        <span>View in 3D</span>
+        <span>{{ t.projects.modelDetails.viewIn3D }}</span>
         <Icon icon="ph:arrow-right" class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />
       </router-link>
     </div>
