@@ -6,22 +6,29 @@
 import { ref, onMounted, onUnmounted, watch } from 'vue';
 import { useDark } from '@vueuse/core';
 import * as THREE from 'three';
-import { OrbitControls } from 'three/examples/jsm/controls/OrbitControls';
-import { STLLoader } from 'three/examples/jsm/loaders/STLLoader';
+import { OrbitControls } from 'three-stdlib';
+import { STLLoader } from 'three-stdlib';
 
 const props = defineProps<{ src: string }>();
 
 const isDark = useDark({
-  selector: 'html',
-  attribute: 'data-theme',
-  valueDark: 'dark',
-  valueLight: 'light',
+    selector: 'html',
+    attribute: 'data-theme',
+    valueDark: 'dark',
+    valueLight: 'light',
 });
 
-const container = ref(null);
-let renderer, scene, camera, controls, animationId: number, mesh;
+const container = ref<HTMLDivElement | null>(null);
+
+let renderer: THREE.WebGLRenderer;
+let scene: THREE.Scene;
+let camera: THREE.PerspectiveCamera;
+let controls: OrbitControls;
+let animationId: number;
+let mesh: THREE.Mesh | null = null;
 
 onMounted(() => {
+    if (!container.value) return;
     initScene();
     loadModel(props.src);
     animate();
@@ -35,6 +42,8 @@ onUnmounted(() => {
     resizeObserver.disconnect();
     controls?.dispose();
     renderer?.dispose();
+    mesh?.geometry.dispose();
+    (mesh?.material as THREE.Material)?.dispose();
 });
 
 watch(
@@ -50,13 +59,16 @@ watch(isDark, (newIsDark) => {
 
 function initScene() {
     scene = new THREE.Scene();
-    
+
     camera = new THREE.PerspectiveCamera(75, 1, 0.1, 1000);
     camera.position.set(80, 80, 80);
 
     renderer = new THREE.WebGLRenderer({ antialias: true });
     renderer.setPixelRatio(window.devicePixelRatio);
-    container.value.appendChild(renderer.domElement);
+
+    if (container.value) {
+        container.value.appendChild(renderer.domElement);
+    }
 
     controls = new OrbitControls(camera, renderer.domElement);
     controls.enableDamping = true;
@@ -69,43 +81,40 @@ function initScene() {
     scene.add(ambientLight);
     scene.add(directionalLight);
 
-    // Set initial theme
     updateTheme(isDark.value);
-    
     onResize();
 }
 
 function updateTheme(darkMode: boolean) {
     if (!scene) return;
-    
+
     if (darkMode) {
-        // Dark theme: dark background with light model
         scene.background = new THREE.Color('#0b1224');
         if (mesh) {
-            mesh.material.color.setHex(0xffffff);
+            (mesh.material as THREE.MeshStandardMaterial).color.setHex(0xffffff);
         }
     } else {
-        // Light theme: light background with dark model
         scene.background = new THREE.Color('#f8fafc');
         if (mesh) {
-            mesh.material.color.setHex(0x404040);
+            (mesh.material as THREE.MeshStandardMaterial).color.setHex(0x404040);
         }
     }
 }
 
-function loadModel(src) {
+// STL loader
+function loadModel(src: string) {
     const loader = new STLLoader();
     loader.load(
         src,
-        (geometry) => {
+        (geometry: THREE.BufferGeometry) => {
             if (mesh) {
                 scene.remove(mesh);
                 mesh.geometry.dispose();
-                mesh.material.dispose();
+                (mesh.material as THREE.Material).dispose();
             }
 
             const modelColor = isDark.value ? 0xffffff : 0x909090;
-            
+
             const material = new THREE.MeshStandardMaterial({
                 color: modelColor,
                 metalness: 0.1,
@@ -117,7 +126,7 @@ function loadModel(src) {
             scene.add(mesh);
         },
         undefined,
-        (error) => {
+        (error: unknown) => {
             console.error('Failed to load STL:', error);
         }
     );
@@ -130,6 +139,8 @@ function animate() {
 }
 
 function onResize() {
+    if (!container.value) return;
+
     const width = container.value.clientWidth;
     const height = container.value.clientHeight;
 
