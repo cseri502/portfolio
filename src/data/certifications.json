@@ -77,6 +77,13 @@
             "category": 3
         },
         {
+            "name": "Cybersecurity",
+            "organization": "Certiport ITS",
+            "date": 2026,
+            "file": "Cert89364340988.pdf",
+            "category": 3
+        },
+        {
             "name": "IT Essentials: PC Hardware and Software",
             "organization": "Cisco",
             "date": 2021,
