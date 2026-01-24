@@ -1,5 +1,5 @@
 <template>
-    <div ref="container" class="stl-container" />
+    <div ref="container" class="stl-container" ></div>
 </template>
 
 <script setup lang="ts">
