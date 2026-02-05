@@ -149,8 +149,8 @@ const displayedCertifications = computed(() => {
           <!-- Certification Tabs -->
           <CategorySelector :categories="t.skills.certCategories" v-model="activeCertCategory" />
 
-          <div class="max-w-3xl mx-auto mt-8">
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div class="max-w-6xl mx-auto mt-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
               <div v-for="cert in displayedCertifications" :key="cert.name"
                 class="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm border border-gray-100 dark:border-gray-700 flex items-start hover:shadow-md transition-shadow duration-200">
                 <Icon icon="ph:certificate" class="w-6 h-6 text-sky-500 mr-3 mt-1 flex-shrink-0" />
