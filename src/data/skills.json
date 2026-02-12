@@ -15,7 +15,7 @@
         { "name": "C#", "icon": "devicon:csharp" },
         { "name": "C++", "icon": "vscode-icons:file-type-cpp3" },
         { "name": "Python", "icon": "vscode-icons:file-type-python" },
-        { "name": "ASP.NET", "icon": "logos:dotnet" },
+        { "name": ".NET", "icon": "logos:dotnet" },
         { "name": "Drizzle ORM", "icon": "material-icon-theme:drizzle" },
         { "name": "MongoDB", "icon": "vscode-icons:file-type-mongo" },
         { "name": "MySQL", "icon": "logos:mysql" },
