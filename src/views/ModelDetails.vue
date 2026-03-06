@@ -140,7 +140,7 @@ onMounted(() => {
           <!-- Actions -->
           <div class="flex space-x-4">
             <a :href="model.stlFile" download
-              class="flex-1 bg-gradient-to-r from-blue-500 to-sky-500 text-white px-6 py-3 rounded-lg hover:from-blue-600 hover:to-sky-600 transition-all duration-300 text-center font-medium">
+              class="flex-1 bg-linear-to-r from-blue-500 to-sky-500 text-white px-6 py-3 rounded-lg hover:from-blue-600 hover:to-sky-600 transition-all duration-300 text-center font-medium">
               <Icon icon="ph:download" class="mr-2 w-5 h-5 inline" />
               {{ t.projects.modelDetails.download }}
             </a>
@@ -276,7 +276,7 @@ onMounted(() => {
           <div
             class="sticky bottom-0 bg-white dark:bg-gray-900 pt-4 pb-4 sm:pb-6 border-t border-gray-200 dark:border-gray-700 -mx-4 sm:-mx-6 px-4 sm:px-6 mt-8">
             <a :href="model.stlFile" download
-              class="w-full bg-gradient-to-r from-blue-500 to-sky-500 text-white px-6 py-3 sm:py-4 rounded-lg hover:from-blue-600 hover:to-sky-600 transition-all duration-300 text-center font-medium flex items-center justify-center">
+              class="w-full bg-linear-to-r from-blue-500 to-sky-500 text-white px-6 py-3 sm:py-4 rounded-lg hover:from-blue-600 hover:to-sky-600 transition-all duration-300 text-center font-medium flex items-center justify-center">
               <Icon icon="ph:download" class="mr-2 w-5 h-5" />
               {{ t.projects.modelDetails.download }}
             </a>

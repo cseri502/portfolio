@@ -73,7 +73,7 @@ function switchTab(tab: string) {
 }</script>
 
 <template>
-  <div class="bg-gradient-to-b from-gray-50 to-white dark:from-gray-950 dark:to-gray-900 backdrop-blur-sm min-h-screen py-16 relative">
+  <div class="bg-linear-to-b from-gray-50 to-white dark:from-gray-950 dark:to-gray-900 backdrop-blur-sm min-h-screen py-16 relative">
     <div class="section-container">
       <Title :title="t.projects.page.title" />
       <p class="text-center text-gray-700 dark:text-gray-300 mb-10 max-w-2xl mx-auto">

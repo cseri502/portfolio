@@ -69,7 +69,7 @@ const displayedCertifications = computed(() => {
 <template>
   <div>
     <!-- Hero Section -->
-    <section class="bg-gradient-to-b from-gray-50 to-white dark:from-gray-950 dark:to-gray-900 py-24 relative">
+    <section class="bg-linear-to-b from-gray-50 to-white dark:from-gray-950 dark:to-gray-900 py-24 relative">
       <div class="section-container">
         <div class="flex flex-col md:flex-row items-center">
           <div class="md:w-1/2 mb-8 md:mb-0">
@@ -87,11 +87,11 @@ const displayedCertifications = computed(() => {
           <div class="md:w-1/2 flex justify-center">
             <div class="relative">
               <div
-                class="absolute -inset-2 w-84 h-84 rounded-full bg-gradient-to-br from-sky-400 to-sky-600 blur-md opacity-70 animate-pulse">
+                class="absolute -inset-2 w-84 h-84 rounded-full bg-linear-to-br from-sky-400 to-sky-600 blur-md opacity-70 animate-pulse">
               </div>
               <!-- Main frame -->
               <div
-                class="w-80 h-80 rounded-full bg-gradient-to-br from-sky-400 to-sky-600 p-1.5 shadow-xl relative z-10">
+                class="w-80 h-80 rounded-full bg-linear-to-br from-sky-400 to-sky-600 p-1.5 shadow-xl relative z-10">
                 <div class="w-full h-full rounded-full bg-[url('/IMG_146.jpg')] bg-cover"></div>
               </div>
             </div>
@@ -153,7 +153,7 @@ const displayedCertifications = computed(() => {
             <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
               <div v-for="cert in displayedCertifications" :key="cert.name"
                 class="bg-white dark:bg-gray-800 rounded-lg p-4 shadow-sm border border-gray-100 dark:border-gray-700 flex items-start hover:shadow-md transition-shadow duration-200">
-                <Icon icon="ph:certificate" class="w-6 h-6 text-sky-500 mr-3 mt-1 flex-shrink-0" />
+                <Icon icon="ph:certificate" class="w-6 h-6 text-sky-500 mr-3 mt-1 shrink-0" />
                 <div>
                   <a :href="`/certificates/${cert.file}`" target="_blank" rel="noopener noreferrer">
                     <h4
@@ -194,7 +194,7 @@ const displayedCertifications = computed(() => {
 
             <div class="relative z-10">
               <div class="flex items-center mb-4">
-                <div class="bg-sky-500/10 p-3 rounded-md mr-3 flex-shrink-0">
+                <div class="bg-sky-500/10 p-3 rounded-md mr-3 shrink-0">
                   <Icon icon="ph:code" class="w-6 h-6 text-sky-500" />
                 </div>
                 <h3 class="text-xl font-bold text-gray-900 dark:text-white">{{ project.title }}</h3>
@@ -240,7 +240,7 @@ const displayedCertifications = computed(() => {
 
               <div class="space-y-6">
                 <div v-for="(item, index) in contactData" :key="index" class="flex items-start">
-                  <div class="bg-sky-500/10 p-3 rounded-full mr-4 flex-shrink-0">
+                  <div class="bg-sky-500/10 p-3 rounded-full mr-4 shrink-0">
                     <Icon :icon="item.icon" class="w-5 h-5 text-sky-500" />
                   </div>
                   <div class="min-w-0 flex-1">

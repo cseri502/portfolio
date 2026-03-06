@@ -43,7 +43,7 @@ watch(() => route.path, () => {
     class="min-h-screen flex flex-col transition-colors duration-300 bg-gray-50 dark:bg-gray-950 text-gray-900 dark:text-gray-100 overflow-hidden">
     <Navbar :isDarkMode="isDark" @toggle-dark-mode="() => toggleDark()" />
 
-    <main class="flex-grow relative z-10 font-inter">
+    <main class="grow relative z-10 font-inter">
       <router-view />
     </main>
 

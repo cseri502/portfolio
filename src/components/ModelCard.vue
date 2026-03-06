@@ -37,15 +37,15 @@ const { t } = useLocales()
         <Icon icon="ph:cube" class="w-12 h-12 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
       </div>
     </div>
-    <div v-else class="h-48 bg-gradient-to-r from-blue-500 to-sky-500 flex items-center justify-center relative group">
+    <div v-else class="h-48 bg-linear-to-r from-blue-500 to-sky-500 flex items-center justify-center relative group">
       <Icon icon="ph:cube" class="w-16 h-16 text-white opacity-80" />
       <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300"></div>
     </div>
 
     <!-- Model details -->
-    <div class="p-6 flex-grow flex flex-col">
+    <div class="p-6 grow flex flex-col">
       <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">{{ model.title }}</h3>
-      <p class="text-gray-600 dark:text-gray-400 mb-4 flex-grow">{{ model.description }}</p>
+      <p class="text-gray-600 dark:text-gray-400 mb-4 grow">{{ model.description }}</p>
 
       <!-- Dimensions -->
       <div v-if="model.dimensions" class="mb-4 p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
@@ -68,7 +68,7 @@ const { t } = useLocales()
 
     <!-- View details section -->
     <div class="p-4 pt-0 mt-auto">
-      <router-link :to="`/models/${model.id}`" class="w-full bg-gradient-to-r from-blue-500 to-sky-500 text-white px-4 py-2 rounded-lg hover:from-blue-600 hover:to-sky-600 transition-all duration-300 inline-flex items-center justify-center group">
+      <router-link :to="`/models/${model.id}`" class="w-full bg-linear-to-r from-blue-500 to-sky-500 text-white px-4 py-2 rounded-lg hover:from-blue-600 hover:to-sky-600 transition-all duration-300 inline-flex items-center justify-center group">
         <Icon icon="ph:cube" class="mr-2 w-4 h-4 group-hover:scale-110 transition-transform duration-200" />
         <span>{{ t.projects.modelDetails.viewIn3D }}</span>
         <Icon icon="ph:arrow-right" class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />

@@ -33,15 +33,15 @@ defineProps<{
       </div>
     </div>
     <div v-else
-      class="h-48 bg-gradient-to-r from-blue-500 to-sky-500 flex items-center justify-center relative group">
+      class="h-48 bg-linear-to-r from-blue-500 to-sky-500 flex items-center justify-center relative group">
       <Icon icon="ph:code" class="w-16 h-16 text-white opacity-80" />
       <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300"></div>
     </div>
 
     <!-- Project details -->
-    <div class="p-6 flex-grow flex flex-col">
+    <div class="p-6 grow flex flex-col">
       <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">{{ project.title }}</h3>
-      <p class="text-gray-600 dark:text-gray-400 mb-4 flex-grow">{{ project.description }}</p>
+      <p class="text-gray-600 dark:text-gray-400 mb-4 grow">{{ project.description }}</p>
 
       <!-- Links -->
       <div v-if="project.github || project.demo" class="mb-4 p-3 bg-gray-50 dark:bg-gray-700/50 rounded-lg">
@@ -72,7 +72,7 @@ defineProps<{
     <!-- View details section -->
     <div class="p-4 pt-0 mt-auto">
       <router-link :to="`/projects/${project.id}`"
-        class="w-full bg-gradient-to-r from-blue-500 to-sky-500 text-white px-4 py-2 rounded-lg hover:from-blue-600 hover:to-sky-600 transition-all duration-300 inline-flex items-center justify-center group">
+        class="w-full bg-linear-to-r from-blue-500 to-sky-500 text-white px-4 py-2 rounded-lg hover:from-blue-600 hover:to-sky-600 transition-all duration-300 inline-flex items-center justify-center group">
         <Icon icon="ph:info" class="mr-2 w-4 h-4 group-hover:scale-110 transition-transform duration-200" />
         <span>{{ t.projects.card }}</span>
         <Icon icon="ph:arrow-right" class="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform duration-200" />

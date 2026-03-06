@@ -65,7 +65,7 @@ onMounted(() => {
           <img :src="project.image" :alt="project.title" class="w-full h-full object-cover" />
         </div>
         <div v-else
-          class="w-full h-80 sm:h-96 bg-gradient-to-r from-sky-500 to-indigo-500 flex items-center justify-center">
+          class="w-full h-80 sm:h-96 bg-linear-to-r from-sky-500 to-indigo-500 flex items-center justify-center">
           <Icon icon="ph:code" class="w-20 h-20 text-white opacity-80" />
         </div>
 
@@ -90,7 +90,7 @@ onMounted(() => {
               <ul class="space-y-3">
                 <li v-for="(feature, index) in project.features[currentLanguage]" :key="index" 
                   class="flex items-start text-gray-700 dark:text-gray-300">
-                  <Icon icon="ph:check-circle" class="w-5 h-5 text-green-500 mr-3 mt-0.5 flex-shrink-0" />
+                  <Icon icon="ph:check-circle" class="w-5 h-5 text-green-500 mr-3 mt-0.5 shrink-0" />
                   <span>{{ feature }}</span>
                 </li>
               </ul>
@@ -100,7 +100,7 @@ onMounted(() => {
           <!-- Actions -->
           <div class="flex flex-col sm:flex-row gap-4">
             <a v-if="project.demo" :href="project.demo" target="_blank" rel="noopener noreferrer"
-              class="flex-1 bg-gradient-to-r from-blue-500 to-sky-500 text-white px-6 py-3 rounded-lg hover:from-blue-600 hover:to-sky-600 transition-all duration-300 text-center font-medium inline-flex items-center justify-center">
+              class="flex-1 bg-linear-to-r from-blue-500 to-sky-500 text-white px-6 py-3 rounded-lg hover:from-blue-600 hover:to-sky-600 transition-all duration-300 text-center font-medium inline-flex items-center justify-center">
               <Icon icon="ph:globe" class="mr-2 w-5 h-5" />
               {{ t.projects.viewDemo }}
             </a>
