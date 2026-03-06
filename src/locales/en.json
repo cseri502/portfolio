@@ -41,7 +41,7 @@
     },
     "skills": {
         "title": "Skills",
-        "certifications": "Certifications",
+        "certifications": "Certificates",
         "certInfo": "Click on the certificate name to open it.",
         "certCategories": ["All", "Networking", "Development", "IT"]
     },
