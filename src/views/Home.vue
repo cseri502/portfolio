@@ -80,8 +80,8 @@ const displayedCertifications = computed(() => {
               &#47;&#47; <span id="role-span"></span>
             </p>
             <div class="flex flex-wrap gap-3">
-              <a href="#about" class="btn btn-primary">{{ t.hero.learnMore }}</a>
-              <a href="#contact" class="btn btn-outline">{{ t.hero.contactMe }}</a>
+              <router-link to="/#about" class="btn btn-primary">{{ t.hero.learnMore }}</router-link>
+              <router-link to="/#contact" class="btn btn-outline">{{ t.hero.contactMe }}</router-link>
             </div>
           </div>
           <div class="md:w-1/2 flex justify-center">
@@ -210,7 +210,7 @@ const displayedCertifications = computed(() => {
               </div>
 
               <div class="mt-4">
-                <router-link :to="`projects/${project.id}`"
+                <router-link :to="`/projects/${project.id}`"
                   class="inline-flex items-center px-3 py-1.5 text-sm bg-sky-600 hover:bg-sky-700 text-white rounded-md transition-colors duration-200">
                   {{ t.projects.viewProject }}
                   <Icon icon="ph:arrow-right" class="ml-1 w-4 h-4" />
