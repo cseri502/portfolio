@@ -23,6 +23,7 @@
         { "name": "MongoDB", "icon": "vscode-icons:file-type-mongo" },
         { "name": "MySQL", "icon": "logos:mysql" },
         { "name": "PostgreSQL", "icon": "devicon:postgresql" },
+        { "name": "Redis", "icon": "devicon:redis" },
         { "name": "Git", "icon": "logos:git-icon" },
         { "name": "Cisco CCNA", "icon": "simple-icons:cisco" }
     ]
