@@ -91,6 +91,13 @@
             "category": 1
         },
         {
+            "name": "Network Security",
+            "organization": "Certiport ITS",
+            "date": 2026,
+            "file": "Cert5151083122.pdf",
+            "category": 1
+        },
+        {
             "name": "IT Essentials: PC Hardware and Software",
             "organization": "Cisco",
             "date": 2021,
