@@ -289,7 +289,7 @@
                 "Intuitive Benutzeroberfläche mit flüssiger Bedienung"
             ]
         }
-    },    
+    },
     {
         "id": 8,
         "title": "Pixelworld",
@@ -368,6 +368,45 @@
                 "Demonstration der Prinzipien der Kollisionsdetektion, Winkel- und Vektorkontrolle",
                 "Implementierung grundlegender Spielphysik in einer 2D-Umgebung",
                 "Entwickelt mit C# und Raylib"
+            ]
+        }
+    },
+    {
+        "id": 10,
+        "title": "RSA Encryption",
+        "description": {
+            "en": "A console-based RSA cryptography application developed in Kotlin as a university assignment. The program demonstrates the complete RSA workflow, including prime number generation with the Miller-Rabin primality test, RSA key pair generation, message encryption and decryption, digital signature creation and verification, as well as optimization using the Chinese Remainder Theorem.",
+            "hu": "Egy Kotlin nyelven fejlesztett konzolos RSA kriptográfiai alkalmazás, amely egyetemi beadandó projektként készült. A program bemutatja az RSA algoritmus teljes működését, beleértve a prímszám-generálást Miller–Rabin prímteszttel, a kulcspár-generálást, az üzenetek titkosítását és visszafejtését, a digitális aláírás létrehozását és ellenőrzését, valamint a Kínai maradéktétel alkalmazásával történő optimalizálást.",
+            "de": "Eine in Kotlin entwickelte Konsolenanwendung zur RSA-Kryptografie, die als Universitätsprojekt erstellt wurde. Das Programm demonstriert den vollständigen RSA-Ablauf, einschließlich Primzahlgenerierung mit dem Miller-Rabin-Primzahltest, Schlüsselpaarerzeugung, Ver- und Entschlüsselung von Nachrichten, Erstellung und Überprüfung digitaler Signaturen sowie Optimierung durch den Chinesischen Restsatz."
+        },
+        "image": "/images/encryption.jpg",
+        "tags": ["Kotlin", "Cryptography", "RSA", "JUnit"],
+        "github": "https://github.com/cseri502/rsa-implementation",
+        "demo": null,
+        "features": {
+            "en": [
+                "RSA public and private key generation",
+                "Prime number generation using the Miller-Rabin primality test",
+                "Message encryption and decryption",
+                "Digital signature creation and verification",
+                "Chinese Remainder Theorem optimization for decryption",
+                "Unit tests covering core mathematical algorithms"
+            ],
+            "hu": [
+                "RSA nyilvános és privát kulcs generálása",
+                "Prímszám-generálás Miller–Rabin prímteszttel",
+                "Üzenetek titkosítása és visszafejtése",
+                "Digitális aláírás létrehozása és ellenőrzése",
+                "Kínai maradéktételen alapuló visszafejtési optimalizáció",
+                "A matematikai algoritmusokat lefedő egységtesztek"
+            ],
+            "de": [
+                "Generierung von öffentlichen und privaten RSA-Schlüsseln",
+                "Primzahlgenerierung mit dem Miller-Rabin-Primzahltest",
+                "Ver- und Entschlüsselung von Nachrichten",
+                "Erstellung und Überprüfung digitaler Signaturen",
+                "Optimierung der Entschlüsselung durch den Chinesischen Restsatz",
+                "Unit-Tests für die zentralen mathematischen Algorithmen"
             ]
         }
     }
